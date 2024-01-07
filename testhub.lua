@@ -85,10 +85,9 @@ end
 game:GetService("TeleportService"):Teleport(9412268818)
 end)
 
-
 local Section = Tab:NewSection("Esp")
 
-Section:NewToggle("Esp", "ToggleInfo", function(state)
+Section:NewToggle("Esp", "Misc", function(state)
     if state then
         _G.epssb = true
 
@@ -135,6 +134,8 @@ end
         for i, v in ipairs(game.Players:GetChildren()) do
                 if v.Character and v.Character:FindFirstChild("Head") and v.Character.Head:FindFirstChild("Gesp") then
  v.Character.Head.Gesp:Destroy()
+                end
+        end
  wait(0.1)
 -- Получаем все объекты в игре
 local objects = game:GetService("Workspace"):GetDescendants()
