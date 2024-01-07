@@ -85,6 +85,113 @@ end
 game:GetService("TeleportService"):Teleport(9412268818)
 end)
 
+
+local Section = Tab:NewSection("Esp")
+
+Section:NewToggle("Esp", "ToggleInfo", function(state)
+    if state then
+        _G.epssb = true
+
+while _G.epssb == true do wait()
+for i, v in ipairs(game.Players:GetChildren()) do
+    if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Head") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Head:FindFirstChild("geps1") == nil then
+        Gesp = Instance.new("BillboardGui", v.Character.Head)
+        Gesp.Adornee = v.Character.Head
+        Gesp.Name = "Gesp"
+        Gesp.Size = UDim2.new(0, 100, 0, 150)
+        Gesp.StudsOffset = Vector3.new(0, 1, 0)
+        Gesp.AlwaysOnTop = true
+        Gesp.StudsOffset = Vector3.new(0, 3, 0)
+        Gesp.StudsOffset = Vector3.new(0, 3, 0)
+        GespText = Instance.new("TextLabel", Gesp)
+        GespText.BackgroundTransparency = 1
+        GespText.Size = UDim2.new(0, 100, 0, 100)
+        GespText.TextSize = 17
+        GespText.Font = Enum.Font.SourceSansSemibold
+        GespText.TextColor3 = Color3.fromRGB(255,48,48)
+        GespText.TextStrokeTransparency = 0
+        GespText.Text = v.leaderstats.Glove.Value
+    end
+end
+    for i, childrik in ipairs(workspace:GetDescendants()) do
+        if childrik:FindFirstChild("Humanoid") then
+            if not childrik:FindFirstChild("EspBox") then
+                if childrik ~= game.Players.LocalPlayer.Character then
+                    local esp = Instance.new("BoxHandleAdornment",childrik)
+                    esp.Adornee = childrik
+                    esp.ZIndex = 0
+                    esp.Size = Vector3.new(4, 5, 1)
+                    esp.Transparency = 0.65
+                    esp.Color3 = Color3.fromRGB(255,48,48)
+                    esp.AlwaysOnTop = true
+                    esp.Name = "EspBox"
+                end
+            end
+        end
+    end
+task.wait()
+end
+    else
+        for i, v in ipairs(game.Players:GetChildren()) do
+                if v.Character and v.Character:FindFirstChild("Head") and v.Character.Head:FindFirstChild("Gesp") then
+ v.Character.Head.Gesp:Destroy()
+ wait(0.1)
+-- Получаем все объекты в игре
+local objects = game:GetService("Workspace"):GetDescendants()
+
+-- Проходимся по каждому объекту
+for _, object in ipairs(objects) do
+    -- Проверяем, является ли имя объекта "ZoneEffects"
+    if object.Name == "EspBox" then
+        -- Удаляем объект
+        object:Destroy()
+    end
+end
+wait(0.1)
+        _G.epssb = false
+
+while _G.epssb == true do wait(2)
+for i, v in ipairs(game.Players:GetChildren()) do
+    if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Head") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Head:FindFirstChild("geps1") == nil then
+        Gesp = Instance.new("BillboardGui", v.Character.Head)
+        Gesp.Adornee = v.Character.Head
+        Gesp.Name = "Gesp"
+        Gesp.Size = UDim2.new(0, 100, 0, 150)
+        Gesp.StudsOffset = Vector3.new(0, 1, 0)
+        Gesp.AlwaysOnTop = true
+        Gesp.StudsOffset = Vector3.new(0, 3, 0)
+        Gesp.StudsOffset = Vector3.new(0, 3, 0)
+        GespText = Instance.new("TextLabel", Gesp)
+        GespText.BackgroundTransparency = 1
+        GespText.Size = UDim2.new(0, 100, 0, 100)
+        GespText.TextSize = 17
+        GespText.Font = Enum.Font.SourceSansSemibold
+        GespText.TextColor3 = Color3.fromRGB(255,48,48)
+        GespText.TextStrokeTransparency = 0
+        GespText.Text = v.leaderstats.Glove.Value
+    end
+end
+    for i, childrik in ipairs(workspace:GetDescendants()) do
+        if childrik:FindFirstChild("Humanoid") then
+            if not childrik:FindFirstChild("EspBox") then
+                if childrik ~= game.Players.LocalPlayer.Character then
+                    local esp = Instance.new("BoxHandleAdornment",childrik)
+                    esp.Adornee = childrik
+                    esp.ZIndex = 0
+                    esp.Size = Vector3.new(4, 5, 1)
+                    esp.Transparency = 0.65
+                    esp.Color3 = Color3.fromRGB(255,48,48)
+                    esp.AlwaysOnTop = true
+                    esp.Name = "EspBox"
+                end
+            end
+        end
+    end
+task.wait()
+end
+    end
+end)
+
 local Section = Tab:NewSection("Fast Farm Slaps Without Autoexe")
 
 Section:NewButton("Fast Farm Slaps", "ButtonInfo", function()
@@ -357,43 +464,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text =
 end
 end)
 
-
-local Section = Tab:NewSection("Mitten And SnowBall farm")
-
-Section:NewToggle("Mitten And SnowBall farm", "ToggleInfo", function(state)
-    if state then
-        _G.MittenFarm = true
-
-while _G.MittenFarm == true do wait(2)
-for i,v in pairs(game.Workspace:GetChildren()) do
-if v.Name == "Gift" then
-    workspace.Gift.CanCollide = false
-    wait(0.1)
-v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-end
-end
-task.wait()
-end
-
-    else
-        _G.MittenFarm = false
-
-while _G.MittenFarm == true do wait(2)
-for i,v in pairs(game.Workspace:GetChildren()) do
-if v.Name == "Gift" then
-    workspace.Gift.CanCollide = false
-    wait(0.1)
-v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-end
-end
-task.wait()
-end
-
-    end
-end)
-
 local Section = Tab:NewSection("Retro")
-
 
 Section:NewButton("Get Retro (in Retro Obby)", "Badge", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.FinishDoor_Retro.Part.CFrame
