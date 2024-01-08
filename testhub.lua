@@ -112,20 +112,16 @@ for i, v in ipairs(game.Players:GetChildren()) do
         GespText.Text = v.leaderstats.Glove.Value
     end
 end
-    for i, childrik in ipairs(workspace:GetDescendants()) do
-        if childrik:FindFirstChild("Humanoid") then
-            if not childrik:FindFirstChild("EspBox") then
-                if childrik ~= game.Players.LocalPlayer.Character then
-                    local esp = Instance.new("BoxHandleAdornment",childrik)
-                    esp.Adornee = childrik
-                    esp.ZIndex = 0
-                    esp.Size = Vector3.new(4, 5, 1)
-                    esp.Transparency = 0.65
-                    esp.Color3 = Color3.fromRGB(255,48,48)
-                    esp.AlwaysOnTop = true
-                    esp.Name = "EspBox"
-                end
-            end
+    for i, v in ipairs(game.Players:GetChildren()) do
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Torso") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Head:FindFirstChild("esp") == nil then
+            esp = Instance.new("BoxHandleAdornment", v.Character.Torso)
+            esp.Adornee = v.Character.Torso
+            esp.ZIndex = 0
+            esp.Size = Vector3.new(4, 5, 1)
+            esp.Transparency = 0.65
+            esp.Color3 = Color3.fromRGB(255,48,48)
+            esp.AlwaysOnTop = true
+            esp.Name = "esp"
         end
     end
 task.wait()
@@ -143,7 +139,7 @@ local objects = game:GetService("Workspace"):GetDescendants()
 -- Проходимся по каждому объекту
 for _, object in ipairs(objects) do
     -- Проверяем, является ли имя объекта "ZoneEffects"
-    if object.Name == "EspBox" then
+    if object.Name == "esp" then
         -- Удаляем объект
         object:Destroy()
     end
@@ -172,20 +168,16 @@ for i, v in ipairs(game.Players:GetChildren()) do
         GespText.Text = v.leaderstats.Glove.Value
     end
 end
-    for i, childrik in ipairs(workspace:GetDescendants()) do
-        if childrik:FindFirstChild("Humanoid") then
-            if not childrik:FindFirstChild("EspBox") then
-                if childrik ~= game.Players.LocalPlayer.Character then
-                    local esp = Instance.new("BoxHandleAdornment",childrik)
-                    esp.Adornee = childrik
-                    esp.ZIndex = 0
-                    esp.Size = Vector3.new(4, 5, 1)
-                    esp.Transparency = 0.65
-                    esp.Color3 = Color3.fromRGB(255,48,48)
-                    esp.AlwaysOnTop = true
-                    esp.Name = "EspBox"
-                end
-            end
+    for i, v in ipairs(game.Players:GetChildren()) do
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Torso") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Head:FindFirstChild("esp") == nil then
+            esp = Instance.new("BoxHandleAdornment", v.Character.Torso)
+            esp.Adornee = v.Character.Torso
+            esp.ZIndex = 0
+            esp.Size = Vector3.new(4, 5, 1)
+            esp.Transparency = 0.65
+            esp.Color3 = Color3.fromRGB(255,48,48)
+            esp.AlwaysOnTop = true
+            esp.Name = "esp"
         end
     end
 task.wait()
