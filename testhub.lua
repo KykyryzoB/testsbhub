@@ -127,6 +127,9 @@ end
 task.wait()
 end
     else
+        _G.removing = true
+
+        while _G.removing == true do wait(2)
         for i, v in ipairs(game.Players:GetChildren()) do
                 if v.Character and v.Character:FindFirstChild("Head") and v.Character.Head:FindFirstChild("Gesp") then
  v.Character.Head.Gesp:Destroy()
@@ -144,6 +147,7 @@ for _, object in ipairs(objects) do
         object:Destroy()
     end
 end
+        end
 wait(0.1)
         _G.epssb = false
 
