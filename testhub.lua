@@ -91,7 +91,7 @@ Section:NewToggle("Esp", "Misc", function(state)
     if state then
         _G.epssb = true
 
-while _G.epssb == true do wait()
+while _G.epssb == true do wait(2)
 for i, v in ipairs(game.Players:GetChildren()) do
     if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Head") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Head:FindFirstChild("geps1") == nil then
         Gesp = Instance.new("BillboardGui", v.Character.Head)
