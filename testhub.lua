@@ -147,7 +147,6 @@ for _, object in ipairs(objects) do
         object:Destroy()
     end
 end
-        end
 wait(0.1)
         _G.epssb = false
 
@@ -186,6 +185,7 @@ end
     end
 task.wait()
 end
+        end
     end
 end)
 
