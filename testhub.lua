@@ -129,7 +129,7 @@ end
     else
         _G.removing = true
 
-        while _G.removing == true do wait(2)
+        while _G.removing == true do wait()
         for i, v in ipairs(game.Players:GetChildren()) do
                 if v.Character and v.Character:FindFirstChild("Head") and v.Character.Head:FindFirstChild("Gesp") then
  v.Character.Head.Gesp:Destroy()
@@ -185,6 +185,7 @@ end
     end
 task.wait()
 end
+        task.wait()
         end
     end
 end)
