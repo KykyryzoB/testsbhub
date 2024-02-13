@@ -427,6 +427,7 @@ wait(15.2)
 end
     else
         game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Stun Glove.",Icon = "rbxassetid://7733658504",Duration = 10})
+    end
 end)
 
 local Section = Tab:NewSection("Get Ice Skate")
@@ -467,7 +468,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text =
 end
 end)
 
-local Section = Tab:NewSection("Retro")
+local Section = Tab:NewSection("Get Retro")
 
 Section:NewButton("Get Retro (in Retro Obby)", "Badge", function()
     if game.Players.LocalPlayer.leaderstats.Glove == "Recall" then
