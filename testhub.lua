@@ -44,6 +44,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('https://discord.gg/jAEwCWSUs4')
 end)
 
+local Section = Tab:NewSection("Telegram")
+
+Section:NewButton("Click to copy", "INFO", function()
+    setclipboard("https://t.me/Kykyryz0B")
+end)
+
 local Section = Tab:NewSection("Youtube")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -71,33 +77,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/KykyryzoB/KykyryzoB-H
     ]])
 end
 game:GetService("TeleportService"):Teleport(9020359053)
-end)
-
-local Section = Tab:NewSection("SR Test Server (for leaking)")
-
-Section:NewButton("Test Server SR", "Misc", function()
-    local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
-if teleportFunc then
-    teleportFunc([[
-        if not game:IsLoaded() then
-            game.Loaded:Wait()
-        end
-        repeat wait() until game.Players.LocalPlayer
-        game:GetService("RunService").RenderStepped:Connect(function()
-            game:GetService("GuiService"):ClearError()
-        end)
-game.CoreGui.RobloxLoadingGUI:Destroy()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KykyryzoB/KykyryzoB-Hub-SB/main/KykryzoB.lua"))()
-spawn(function()
-    while true do
-        game:GetService("GuiService"):ClearError()
-        game.CoreGui.RobloxLoadingGUI:Destroy()
-        wait(1)
-    end
-end)
-    ]])
-end
-game:GetService("TeleportService"):Teleport(9412268818)
 end)
 
 local Section = Tab:NewSection("Esp")
@@ -128,7 +107,7 @@ for i, v in ipairs(game.Players:GetChildren()) do
     end
 end
     for i, v in ipairs(game.Players:GetChildren()) do
-        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Torso") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Head:FindFirstChild("esp") == nil then
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Torso") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Torso:FindFirstChild("esp") == nil then
             esp = Instance.new("BoxHandleAdornment", v.Character.Torso)
             esp.Adornee = v.Character.Torso
             esp.ZIndex = 0
@@ -156,14 +135,9 @@ end
                 end
         end
  wait(0.1)
--- Получаем все объекты в игре
 local objects = game:GetService("Workspace"):GetDescendants()
-
--- Проходимся по каждому объекту
 for _, object in ipairs(objects) do
-    -- Проверяем, является ли имя объекта "ZoneEffects"
     if object.Name == "esp" then
-        -- Удаляем объект
         object:Destroy()
               _G.epssb = false
 
@@ -189,7 +163,7 @@ Section:NewToggle("Get Inf Ingredient(Alchemist)", "ToggleInfo", function(state)
     if state then
         _G.alhimick = true
 
-while _G.alhimick == true do wait() -- Вместо wait можно поставить рендер степпед 
+while _G.alhimick == true do wait() 
     local args = {
     [1] = "AddItem",
     [2] = "Blood Rose"
@@ -263,6 +237,13 @@ game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(u
 local args = {
     [1] = "AddItem",
     [2] = "Hazel Lily"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
+--------------------------------------------------------------------------------------------
+local args = {
+    [1] = "AddItem",
+    [2] = "Cake Mix"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
@@ -270,83 +251,8 @@ end
     else
         _G.alhimick = false
 
-while _G.alhimick == true do wait() -- Вместо wait можно поставить рендер степпед 
-    local args = {
-    [1] = "AddItem",
-    [2] = "Blood Rose"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
-------------------------------------------------------------------------------------------------------
-local args = {
-    [1] = "AddItem",
-    [2] = "Jade Stone"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
-----------------------------------------------------------------------------------------------------
-local args = {
-    [1] = "AddItem",
-    [2] = "Plane Flower"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
-----------------------------------------------------------------------------------------------------
-local args = {
-    [1] = "AddItem",
-    [2] = "Lamp Grass"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
------------------------------------------------------------------------------------------------------
-local args = {
-    [1] = "AddItem",
-    [2] = "Winter Rose"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
-----------------------------------------------------------------------------------------------------
-local args = {
-    [1] = "AddItem",
-    [2] = "Autumn Sprout"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
-----------------------------------------------------------------------------------------------------
-local args = {
-    [1] = "AddItem",
-    [2] = "Dire Flower"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
-----------------------------------------------------------------------------------------------
-local args = {
-    [1] = "AddItem",
-    [2] = "Dark Root"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
---------------------------------------------------------------------------------------------
-local args = {
-    [1] = "AddItem",
-    [2] = "Fire Flower"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
----------------------------------------------------------------------------------------------
-local args = {
-    [1] = "AddItem",
-    [2] = "Mushroom"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
---------------------------------------------------------------------------------------------
-local args = {
-    [1] = "AddItem",
-    [2] = "Hazel Lily"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
+while _G.alhimick == true do wait() 
+    print(213)
 end
     end
 end)
@@ -389,7 +295,7 @@ local Tab = Window:NewTab("Teleport")
 
 local Section = Tab:NewSection("Teleport")
 
-Section:NewDropdown("All Teleports", "Teleport", {"SafePort", "Slapples Isl", "Moai Isl", "Plate", "Battle Arena", "Default Arena", "Normal Arena", "Spawn"}, function(abc)
+Section:NewDropdown("All Teleports", "Teleport", {"SafePort", "Slapples Isl", "Moai Isl", "Plate", "Battle Arena", "Cannon Island", "Default Arena", "Normal Arena", "Spawn"}, function(abc)
     if abc == "SafePort" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-450.217651, -28151.4883, -2.34852624, 1, 0, 0, 0, 1, 0, 0, 0, 1)
   elseif abc == "Slapples Isl" then
@@ -406,29 +312,12 @@ elseif abc == "Normal Arena" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.3642788, -3.69053721, -7.41954088, 0.405183077, -0.00669269683, -0.914211094, -1.2553046e-05, 0.999973178, -0.00732610561, 0.914235532, 0.00297989813, 0.40517211)
 elseif abc == "Spawn" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-798.47345, 329.357147, 0.84058404, -0.791819096, -2.52048302e-08, -0.610755682, -2.72838037e-08, 1, -5.89596372e-09, 0.610755682, 1.19952013e-08, -0.791819096)
+elseif abc == "Cannon Island" then 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(257.620972, 35.9974861, 198.8535, 0.788386106, 0.045268368, -0.613512933, -8.81827944e-09, 0.997288942, 0.0735854656, 0.615180731, -0.0580137558, 0.786248744)
 end
 end)
 
 local Tab = Window:NewTab("Badge")
-
-local Section = Tab:NewSection("Get Kinetik (12~13 min)")
-
-Section:NewButton("Get Kinetik", "Badge", function()
-    if game.Players.LocalPlayer.leaderstats.Glove == "Stun" then
-        OGL = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-for i = 1,100 do
-game.ReplicatedStorage.SelfKnockback:FireServer({["Force"] = 0,["Direction"] = Vector3.new(0,0.01,0)})
-wait(0.05)
-end
-wait(1)
-for i = 1,50 do
-    game:GetService('VirtualInputManager'):SendKeyEvent(true,'E',false,x)
-wait(15.2)
-end
-    else
-        game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Stun Glove.",Icon = "rbxassetid://7733658504",Duration = 10})
-    end
-end)
 
 local Section = Tab:NewSection("Get Ice Skate")
 
@@ -552,13 +441,13 @@ Section:NewToggle("Spam Scythe", "ToggleInfo", function(state)
     if state then
         _G.SpamScythe = true
 
-while _G.SpamScythe == true do game:GetService("RunService").RenderStepped:wait() -- Вместо wait можно поставить рендер степпед 
+while _G.SpamScythe == true do game:GetService("RunService").RenderStepped:wait() 
 game:GetService("ReplicatedStorage"):WaitForChild("GeneralAbility"):FireServer()
 end
     else
         _G.SpamScythe = false
 
-while _G.SpamScythe == true do game:GetService("RunService").RenderStepped:wait() -- Вместо wait можно поставить рендер степпед 
+while _G.SpamScythe == true do game:GetService("RunService").RenderStepped:wait()
 game:GetService("ReplicatedStorage"):WaitForChild("GeneralAbility"):FireServer()
 end
     end
@@ -570,7 +459,7 @@ Section:NewToggle("Spam Jester Cards", "ToggleInfo", function(state)
     if state then
         _G.Cards = true
 
-while _G.Cards == true do wait() -- Вместо wait можно поставить рендер степпед 
+while _G.Cards == true do wait() 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
@@ -601,7 +490,7 @@ end
     else
         _G.Cards = false
 
-while _G.Cards == true do wait() -- Вместо wait можно поставить рендер степпед 
+while _G.Cards == true do wait() 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
@@ -668,12 +557,10 @@ Section:NewToggle("Spam Shukuchi", "Combat", function(state)
     if state then
         _G.Shukuchi = true
 
-while _G.Shukuchi == true do wait() -- Вместо wait можно поставить рендер степпед 
+while _G.Shukuchi == true do wait() 
 local player = game.Players.LocalPlayer
 local nearestPlayer = nil
 local shortestDistance = math.huge
-
--- Поиск ближайшего игрока
 for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
     if otherPlayer ~= player then
         local distance = (otherPlayer.Character.HumanoidRootPart.Position - player.Character.HumanoidRootPart.Position).magnitude
@@ -695,12 +582,10 @@ end
     else
         _G.Shukuchi = false
 
-while _G.Shukuchi == true do wait() -- Вместо wait можно поставить рендер степпед 
+while _G.Shukuchi == true do wait() 
 local player = game.Players.LocalPlayer
 local nearestPlayer = nil
 local shortestDistance = math.huge
-
--- Поиск ближайшего игрока
 for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
     if otherPlayer ~= player then
         local distance = (otherPlayer.Character.HumanoidRootPart.Position - player.Character.HumanoidRootPart.Position).magnitude
@@ -729,104 +614,60 @@ local Section = Tab:NewSection("Anti Portal (Only Normal Arena)")
 
 Section:NewToggle("Anti Portal", "Antis", function(state)
     if state then
-        -- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "Anti GS"
-block.Size = Vector3.new(12.762105941772461, 14.961214065551758, 5.8665102124214172) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.9 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-803.081604, 328.906738, -21.2476311, 0, 0, 1, 0, -1, 0, 1, 0, -0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(12.762105941772461, 14.961214065551758, 5.8665102124214172) 
+block.Transparency = 0.9 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(-803.081604, 328.906738, -21.2476311, 0, 0, 1, 0, -1, 0, 1, 0, -0) 
 block.Parent = game.Workspace
 -----------------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "Anti KS"
-block.Size = Vector3.new(12.762105941772461, 14.961214065551758, 5.8665102124214172) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.9 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-788.860962, 328.906738, 17.1004639, 0, 0, -1, 0, -1, -0, -1, 0, -0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(12.762105941772461, 14.961214065551758, 5.8665102124214172) 
+block.Transparency = 0.9 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(-788.860962, 328.906738, 17.1004639, 0, 0, -1, 0, -1, -0, -1, 0, -0)
 block.Parent = game.Workspace
 ---------------------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "Anti SR"
-block.Size = Vector3.new(12.762105941772461, 14.961214065551758, 5.8665102124214172) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.9 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-803.098694, 328.906738, 16.7261944, 0, 0, 1, 0, -1, 0, 1, 0, -0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(12.762105941772461, 14.961214065551758, 5.8665102124214172) 
+block.Transparency = 0.9
+block.CanCollide = true
+block.Anchored = true 
+block.Position = Vector3.new(-803.098694, 328.906738, 16.7261944, 0, 0, 1, 0, -1, 0, 1, 0, -0)
 block.Parent = game.Workspace
 ------------------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "Anti DF"
-block.Size = Vector3.new(5.8665102124214172, 14.961214065551758, 12.762105941772461) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.9 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-810.073608, 329.886566, -8.02650452, 1, 0, 0, 0, -1, 0, 0, 0, -1) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(5.8665102124214172, 14.961214065551758, 12.762105941772461)
+block.Transparency = 0.9
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(-810.073608, 329.886566, -8.02650452, 1, 0, 0, 0, -1, 0, 0, 0, -1)
 block.Parent = game.Workspace
     else
-        -- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("Anti GS")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 ----------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("Anti KS")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 --------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("Anti SR")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 ------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("Anti DF")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 
     end
@@ -837,381 +678,222 @@ local Section = Tab:NewSection("Anti Void (Work in Battle Arena, Retro Obby, Psy
 
 Section:NewToggle("Anti Void", "ToggleInfo", function(state)
     if state then
-        -- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoid"
-block.Size = Vector3.new(265, 1, 1000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(0, -9, 0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(265, 1, 1000) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(0, -9, 0)
 block.Parent = game.Workspace
 ---------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoidPsycho"
-block.Size = Vector3.new(2000, 1, 1000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(17800.9082, 2947, -226.017517, -0.248515129, 0.00487846136, -0.968615651, 0.966844261, -0.0594091415, -0.248359889, -0.0587562323, -0.998221755, 0.0100474358) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(2000, 1, 1000) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(17800.9082, 2947, -226.017517, -0.248515129, 0.00487846136, -0.968615651, 0.966844261, -0.0594091415, -0.248359889, -0.0587562323, -0.998221755, 0.0100474358)
 block.Parent = game.Workspace
 ----------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoid2"
-block.Size = Vector3.new(500, 10, 1000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(200, -24, 0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(500, 10, 1000)
+block.Transparency = 0.5 
+block.CanCollide = true
+block.Anchored = true 
+block.Position = Vector3.new(200, -24, 0)
 block.Parent = game.Workspace
 ----------------------------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoid3"
-block.Size = Vector3.new(1000, 1, 48) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(150, -24, 0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(1000, 1, 48) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(150, -24, 0) 
 block.Parent = game.Workspace
 ----------------------------------------------------------------------------------------------------------------------------
--- Находим блок, который нужно вращать
 local block = workspace:FindFirstChild("AntiVoid3")
-
--- Проверяем, что блок найден
 if block then
-    -- Задаем угол поворота в градусах
     local rotationAngle = 90
-
-    -- Создаем новую CFrame с учетом поворота
     local rotationCFrame = CFrame.Angles(0, math.rad(rotationAngle), 0)
-
-    -- Применяем поворот к CFrame блока
     block.CFrame = block.CFrame * rotationCFrame
 end
 -------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoidRetro6"
-block.Size = Vector3.new(460, 3, 150) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-27930.4746, 160.009445, 4835.11084, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(460, 3, 150) 
+block.Transparency = 0.5
+block.CanCollide = true
+block.Anchored = true 
+block.Position = Vector3.new(-27930.4746, 160.009445, 4835.11084, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
 block.Parent = game.Workspace
 -------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoidRetro5"
-block.Size = Vector3.new(500, 3, 150) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-27965.0977, 35.1371307, 4834.51074, 1, 0, 0, 0, 1, 0, 0, 0, 1) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(500, 3, 150) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-27965.0977, 35.1371307, 4834.51074, 1, 0, 0, 0, 1, 0, 0, 0, 1) 
 block.Parent = game.Workspace
 -------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoidRetro4"
-block.Size = Vector3.new(1000, 5, 500) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-28030.8477, -93.4633942, 4950.85986, -1.1920929e-07, 0, -1.00000012, 0, 1, 0, 1.00000012, 0, -1.1920929e-07) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(1000, 5, 500) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(-28030.8477, -93.4633942, 4950.85986, -1.1920929e-07, 0, -1.00000012, 0, 1, 0, 1.00000012, 0, -1.1920929e-07)
 block.Parent = game.Workspace
 -------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoidRetro3"
-block.Size = Vector3.new(100, 5, 1000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-28030.6484, -219.863602, 4836.85986, 0, 0, 1, 0, 1, -0, -1, 0, 0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(100, 5, 1000) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(-28030.6484, -219.863602, 4836.85986, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 block.Parent = game.Workspace
 -------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoidRetro2"
-block.Size = Vector3.new(1000, 2, 1000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-16906.6445, 770.000549, 4719.68848, 1, 0, 0, 0, 1, 0, 0, 0, 1) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(1000, 2, 1000)
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-16906.6445, 770.000549, 4719.68848, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 block.Parent = game.Workspace
 -------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoidRetro"
-block.Size = Vector3.new(1000, 2, 1000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-16874.8262, -7.55000019, 4799.2666) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(1000, 2, 1000)
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-16874.8262, -7.55000019, 4799.2666)
 block.Parent = game.Workspace
 -------------------------------------------------------------------------------------------------
--- Находим блок, который нужно вращать
 local block = workspace:FindFirstChild("AntiVoid3")
-
--- Проверяем, что блок найден
 if block then
-    -- Задаем угол поворота в градусах
     local rotationAngle = 45
-
-    -- Создаем новую CFrame с учетом поворота
     local rotationCFrame = CFrame.Angles(math.rad(rotationAngle), 0, 0)
-
-    -- Применяем поворот к CFrame блока
     block.CFrame = block.CFrame * rotationCFrame
 end
 --------------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoid4"
-block.Size = Vector3.new(265, 1, 1000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-135, -9, 0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(265, 1, 1000) 
+block.Transparency = 0.5
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(-135, -9, 0)
 block.Parent = game.Workspace
 -----------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoidBA"
-block.Size = Vector3.new(2000, 10, 2000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(3500, 74.5, 0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(2000, 10, 2000)
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(3500, 74.5, 0)
 block.Parent = game.Workspace
 -----------------------------------------------------------------------------------------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoid5"
-block.Size = Vector3.new(300, 1, 1000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-400, -15, 0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(300, 1, 1000)
+block.Transparency = 0.5 
+block.CanCollide = true
+block.Anchored = true 
+block.Position = Vector3.new(-400, -15, 0)
 block.Parent = game.Workspace
     else
-        -- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoid")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 ----------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoid2")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 -----------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoid3")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 --------------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoid4")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 --------------------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoidBA")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 ------------------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoidRetro6")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 ------------------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoidRetro5")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 ------------------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoidRetro4")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 -------------------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoidRetro3")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 ------------------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoidPsycho")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 ------------------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoidRetro2")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
-    block:Destroy()
-else
-    print("Блок не найден")
+    block:Destroy() 
 end
 -------------------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoidRetro")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 --------------------------------------------------------------------------------------------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoid5")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
     end
 end)
 
-local Tab = Window:NewTab("Players")
+local Tab = Window:NewTab("Player")
 
 local Section = Tab:NewSection("Speed Hack")
 
-Section:NewSlider("Player Speed", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
 end)
 
 local Section = Tab:NewSection("Jump Hack")
 
-Section:NewSlider("Player Jump", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
 end)
 
 local Section = Tab:NewSection("Gravity Hack")
 
-Section:NewSlider("Player Gravity", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    workspace.Gravity = s
+Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
+    workspace.Gravity = txt
 end)
 
 local Tab = Window:NewTab("Others Hub")
@@ -1274,6 +956,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('https://discord.gg/jAEwCWSUs4')
 end)
 
+local Section = Tab:NewSection("Telegram")
+
+Section:NewButton("Click to copy", "INFO", function()
+    setclipboard("https://t.me/Kykyryz0B")
+end)
+
 local Section = Tab:NewSection("Youtube")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -1298,7 +986,7 @@ for _, player in ipairs(Players:GetPlayers()) do
         local character = player.Character
         if character and character:FindFirstChild("Head") then
             local distance = (LocalPlayer.Character.Head.Position - character.Head.Position).magnitude
-            if distance <= 25 then  -- обновлено условие для радиуса 25 и меньше
+            if distance <= 25 then  
                 table.insert(NearbyPlayers, player)
             end
         end
@@ -1318,6 +1006,7 @@ end
         _G.slapAurasr = false
 
 while _G.slapAurasr == true do wait()
+                if game.Players.LocalPlayer.Character:WaitForChild("inMatch").Value == true then
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local NearbyPlayers = {}
@@ -1327,7 +1016,7 @@ for _, player in ipairs(Players:GetPlayers()) do
         local character = player.Character
         if character and character:FindFirstChild("Head") then
             local distance = (LocalPlayer.Character.Head.Position - character.Head.Position).magnitude
-            if distance <= 25 then  -- обновлено условие для радиуса 25 и меньше
+            if distance <= 25 then  
                 table.insert(NearbyPlayers, player)
             end
         end
@@ -1343,6 +1032,7 @@ if #NearbyPlayers > 0 then
     end
 end
 end
+                    end
     end
 end)
 
@@ -1370,30 +1060,18 @@ local Section = Tab:NewSection("Anti Lava")
 
 Section:NewToggle("Anti Lava", "Antis", function(state)
     if state then
-        -- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiLavaKYK"
-block.Size = Vector3.new(100, 1, 110) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-240.93428, -29.1903477, 401.880219, 0.349086821, -0.0864096507, 0.933097899, 1.95710618e-06, 0.995739639, 0.0922098681, -0.937090397, -0.0321874209, 0.347599745) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(100, 1, 110) 
+block.Transparency = 0.5
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-240.93428, -29.1903477, 401.880219, 0.349086821, -0.0864096507, 0.933097899, 1.95710618e-06, 0.995739639, 0.0922098681, -0.937090397, -0.0321874209, 0.347599745) 
 block.Parent = game.Workspace
     else
-        
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiLavaKYK")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
     end
 end)
@@ -1402,30 +1080,18 @@ local Section = Tab:NewSection("Anti Acid")
 
 Section:NewToggle("Anti Acid", "Antis", function(state)
     if state then
-        -- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiAcidKYK"
-block.Size = Vector3.new(200, 1, 200) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-64.6827164, 0.228857517, -711.446655, -0.91774404, -0.0017926431, 0.397168338, -6.40035691e-10, 0.999989808, 0.00451351237, -0.397172391, 0.004142249, -0.917734683) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(200, 1, 200) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-64.6827164, 0.228857517, -711.446655, -0.91774404, -0.0017926431, 0.397168338, -6.40035691e-10, 0.999989808, 0.00451351237, -0.397172391, 0.004142249, -0.917734683)
 block.Parent = game.Workspace
     else
-        
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiAcidKYK")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
     end
 end)
@@ -1434,54 +1100,33 @@ local Section = Tab:NewSection("Anti Void")
 
 Section:NewToggle("Anti Void", "Antis", function(state)
     if state then
-        -- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoidSR"
-block.Size = Vector3.new(100000, 10, 100000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(482.1156005859375, -159.50196838378906, -147.98330688476562) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(100000, 10, 100000) 
+block.Transparency = 0.5 
+block.CanCollide = true
+block.Anchored = true
+block.Position = Vector3.new(482.1156005859375, -159.50196838378906, -147.98330688476562)
 block.Parent = game.Workspace
 -----------------------
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "AntiVoidSR2"
-block.Size = Vector3.new(100000, 10, 100000) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.5 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-674.9874267578125, -159.50196838378906, -263.7173156738281) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(100000, 10, 100000) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-674.9874267578125, -159.50196838378906, -263.7173156738281)
 block.Parent = game.Workspace
     else
-        -- Находим блок по его имени
+        
 local block = game.Workspace:FindFirstChild("AntiVoidSR")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
 -------
--- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("AntiVoidSR2")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
-else
-    print("Блок не найден")
 end
     end
 end)
@@ -1491,14 +1136,9 @@ local Tab = Window:NewTab("Remove")
 local Section = Tab:NewSection("Remove Acid")
 
 Section:NewButton("Remove Acid", "Remove", function()
-    -- Получаем все объекты в игре
 local objects = game:GetService("Workspace"):GetDescendants()
-
--- Проходимся по каждому объекту
 for _, object in ipairs(objects) do
-    -- Проверяем, является ли имя объекта "Acid"
     if object.Name == "Acid" then
-        -- Удаляем объект
         object:Destroy()
     end
 end
@@ -1507,14 +1147,9 @@ end)
 local Section = Tab:NewSection("Remove Lava")
 
 Section:NewButton("Remove Lava", "Remove", function()
-        -- Получаем все объекты в игре
 local objects = game:GetService("Workspace"):GetDescendants()
-
--- Проходимся по каждому объекту
 for _, object in ipairs(objects) do
-    -- Проверяем, является ли имя объекта "Acid"
     if object.Name == "Lava" then
-        -- Удаляем объект
         object:Destroy()
     end
 end
@@ -1523,16 +1158,10 @@ end)
 local Section = Tab:NewSection("Remove Zone Blur")
 
 Section:NewButton("Remove Zone Blur", "Remove", function()
-    -- Получаем все объекты в игре
 local objects = game:GetService("ReplicatedStorage"):GetDescendants()
-    -- Получаем все объекты в игре
 local objects = game:GetService("ReplicatedStorage"):GetDescendants()
-
--- Проходимся по каждому объекту
 for _, object in ipairs(objects) do
-    -- Проверяем, является ли имя объекта "ZoneEffects"
     if object.Name == "ZoneEffects" then
-        -- Удаляем объект
         object:Destroy()
     end
 end
@@ -1598,7 +1227,7 @@ GespText.Text = v.Glove.Value
                 end
             end
     for i, v in ipairs(game.Players:GetChildren()) do
-        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Torso") and v.Character.inMatch.Value == true and v.Character.Head:FindFirstChild("esp") == nil then
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Torso") and v.Character.inMatch.Value == true and v.Character.Torso:FindFirstChild("esp") == nil then
             esp = Instance.new("BoxHandleAdornment", v.Character.Torso)
             esp.Adornee = v.Character.Torso
             esp.ZIndex = 0
@@ -1626,14 +1255,9 @@ end
                 end
         end
  wait(0.1)
--- Получаем все объекты в игре
 local objects = game:GetService("Workspace"):GetDescendants()
-
--- Проходимся по каждому объекту
 for _, object in ipairs(objects) do
-    -- Проверяем, является ли имя объекта "ZoneEffects"
     if object.Name == "esp" then
-        -- Удаляем объект
         object:Destroy()
         end
     end
@@ -1659,26 +1283,6 @@ Section:NewButton("Leave Bus", "Misc", function()
     game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("BusJumping"):FireServer()
 end)
 
-local Tab = Window:NewTab("Players")
-
-local Section = Tab:NewSection("Speed Hack")
-
-Section:NewSlider("Player Speed", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-
-local Section = Tab:NewSection("Jump Hack")
-
-Section:NewSlider("Player Jump", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-end)
-
-local Section = Tab:NewSection("Gravity Hack")
-
-Section:NewSlider("Player Gravity", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    workspace.Gravity = s
-end)
-
 local Tab = Window:NewTab("Others Hub")
 
 local Section = Tab:NewSection("Guy that exsits hub")
@@ -1691,6 +1295,26 @@ local Section = Tab:NewSection("Inf Yield")
 
 Section:NewButton("Infite Yield", "Others Hub", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Speed Hack")
+
+Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+end)
+
+local Section = Tab:NewSection("Jump Hack")
+
+Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+end)
+
+local Section = Tab:NewSection("Gravity Hack")
+
+Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
+    workspace.Gravity = txt
 end)
 
 end
@@ -1711,6 +1335,12 @@ local Section = Tab:NewSection("Discord Server")
 
 Section:NewButton("Click to copy", "INFO", function()
     setclipboard('https://discord.gg/jAEwCWSUs4')
+end)
+
+local Section = Tab:NewSection("Telegram")
+
+Section:NewButton("Click to copy", "INFO", function()
+    setclipboard("https://t.me/Kykyryz0B")
 end)
 
 local Section = Tab:NewSection("Youtube")
@@ -1818,6 +1448,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('https://discord.gg/jAEwCWSUs4')
 end)
 
+local Section = Tab:NewSection("Telegram")
+
+Section:NewButton("Click to copy", "INFO", function()
+    setclipboard("https://t.me/Kykyryz0B")
+end)
+
 local Section = Tab:NewSection("Youtube")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -1923,6 +1559,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('https://discord.gg/jAEwCWSUs4')
 end)
 
+local Section = Tab:NewSection("Telegram")
+
+Section:NewButton("Click to copy", "INFO", function()
+    setclipboard("https://t.me/Kykyryz0B")
+end)
+
 local Section = Tab:NewSection("Youtube")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -1935,27 +1577,18 @@ local Section = Tab:NewSection("Anti void")
 
 Section:NewToggle("Anti Void", "Antis", function(state)
     if state then
-        -- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "Anti Void Bob"
-block.Size = Vector3.new(2500, 16, 1140) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0.4 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(0, -8, -43, 1, 0, 0, 0, 1, 0, 0, 0, 1) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(2500, 16, 1140) 
+block.Transparency = 0.4
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(0, -8, -43, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 block.Parent = game.Workspace
 
     else
-        -- Находим блок по его имени
 local block = game.Workspace:FindFirstChild("Anti Void Bob")
-
--- Проверяем, что блок существует
 if block then
-    -- Удаляем блок
     block:Destroy()
 else
     print("Блок не найден")
@@ -1966,10 +1599,7 @@ end)
 Section:NewButton("Anti Ring(you cant slap bob)", "Antis", function()
     while game:GetService("RunService").RenderStepped:wait() do
 local ring = game.Workspace:FindFirstChild("Ring")
-
--- Проверяем, существует ли объект "Ring"
 if ring then
-    -- Удаляем объект "Ring"
     ring:Destroy()
     print("Объект 'Ring' успешно удален.")
 else
@@ -1988,24 +1618,24 @@ Section:NewButton("Inf yeild", "Antis", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)    
 
-local Tab = Window:NewTab("Players")
+local Tab = Window:NewTab("Player")
 
 local Section = Tab:NewSection("Speed Hack")
 
-Section:NewSlider("Player Speed", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
 end)
 
 local Section = Tab:NewSection("Jump Hack")
 
-Section:NewSlider("Player Jump", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
 end)
 
 local Section = Tab:NewSection("Gravity Hack")
 
-Section:NewSlider("Player Gravity", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    workspace.Gravity = s
+Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
+    workspace.Gravity = txt
 end)
 
 end
@@ -2026,6 +1656,12 @@ local Section = Tab:NewSection("Discord Server")
 
 Section:NewButton("Click to copy", "INFO", function()
     setclipboard('https://discord.gg/jAEwCWSUs4')
+end)
+
+local Section = Tab:NewSection("Telegram")
+
+Section:NewButton("Click to copy", "INFO", function()
+    setclipboard("https://t.me/Kykyryz0B")
 end)
 
 local Section = Tab:NewSection("Youtube")
@@ -2341,6 +1977,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('https://discord.gg/jAEwCWSUs4')
 end)
 
+local Section = Tab:NewSection("Telegram")
+
+Section:NewButton("Click to copy", "INFO", function()
+    setclipboard("https://t.me/Kykyryz0B")
+end)
+
 local Section = Tab:NewSection("Youtube")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -2417,6 +2059,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('https://discord.gg/jAEwCWSUs4')
 end)
 
+local Section = Tab:NewSection("Telegram")
+
+Section:NewButton("Click to copy", "INFO", function()
+    setclipboard("https://t.me/Kykyryz0B")
+end)
+
 local Section = Tab:NewSection("Youtube")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -2441,7 +2089,7 @@ for _, player in ipairs(Players:GetPlayers()) do
         local character = player.Character
         if character and character:FindFirstChild("Head") then
             local distance = (LocalPlayer.Character.Head.Position - character.Head.Position).magnitude
-            if distance <= 25 then  -- обновлено условие для радиуса 25 и меньше
+            if distance <= 25 then 
                 table.insert(NearbyPlayers, player)
             end
         end
@@ -2470,7 +2118,7 @@ for _, player in ipairs(Players:GetPlayers()) do
         local character = player.Character
         if character and character:FindFirstChild("Head") then
             local distance = (LocalPlayer.Character.Head.Position - character.Head.Position).magnitude
-            if distance <= 25 then  -- обновлено условие для радиуса 25 и меньше
+            if distance <= 25 then 
                 table.insert(NearbyPlayers, player)
             end
         end
@@ -2511,5 +2159,5 @@ end)
 
 end
 
-wait(1)
+wait(0.2)
 Library:ToggleUIGui()
