@@ -1,20 +1,15 @@
--- Создаем новый блок
 local block = Instance.new("Part")
-
--- Настройки блока
 block.Name = "SafePort15"
-block.Size = Vector3.new(100, 10, 100) -- Размер блока (можно изменить на нужные значения)
-block.Transparency = 0,1 -- Прозрачность блока (1 = полностью прозрачный)
-block.CanCollide = true -- Блок не будет взаимодействовать с другими объектами
-block.Anchored = true -- Блок будет закреплен на месте
-block.Position = Vector3.new(-450.2176666, -28161.4883, -2.34852624, 0, 0, -1, 0, 1, 0, 1, 0, 0) -- Позиция блока (можно изменить на нужные значения)
-
--- Добавляем блок в игровой мир
+block.Size = Vector3.new(100, 10, 100) 
+block.Transparency = 0.5 
+block.CanCollide = true
+block.Anchored = true
+block.Position = Vector3.new(-450.2176666, -28161.4883, -2.34852624, 0, 0, -1, 0, 1, 0, 1, 0, 0)
 block.Parent = game.Workspace
 --------------------------------------------------------------------------------------
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Kavo.lua"))()
 
-if game.PlaceId == 6403373529 then  --- спасибо agurre за то что сказал(а) как делать
+if game.PlaceId == 6403373529 then 
 
 local bypass;
     bypass = hookmetamethod(game, "__namecall", function(method, ...) 
@@ -57,27 +52,6 @@ Section:NewButton("Click to copy", "INFO", function()
 end)
 
 local Tab = Window:NewTab("Misc")
-
-local Section = Tab:NewSection("SB Test Server (for leaking)")
-
-Section:NewButton("Test Server SB", "Misc", function()
-    local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
-if teleportFunc then
-    teleportFunc([[
-        if not game:IsLoaded() then
-            game.Loaded:Wait()
-        end
-        repeat wait() until game.Players.LocalPlayer
-        game:GetService("RunService").RenderStepped:Connect(function()
-            game:GetService("GuiService"):ClearError()
-        end)
-        game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
-wait(0.2)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KykyryzoB/KykyryzoB-Hub-SB/main/KykryzoB.lua"))()
-    ]])
-end
-game:GetService("TeleportService"):Teleport(9020359053)
-end)
 
 local Section = Tab:NewSection("Esp")
 
@@ -1585,33 +1559,55 @@ block.CanCollide = true
 block.Anchored = true 
 block.Position = Vector3.new(0, -8, -43, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 block.Parent = game.Workspace
-
     else
 local block = game.Workspace:FindFirstChild("Anti Void Bob")
 if block then
     block:Destroy()
-else
-    print("Блок не найден")
 end
    end
 end)
 
-Section:NewButton("Anti Ring(you cant slap bob)", "Antis", function()
-    while game:GetService("RunService").RenderStepped:wait() do
-local ring = game.Workspace:FindFirstChild("Ring")
-if ring then
-    ring:Destroy()
-    print("Объект 'Ring' успешно удален.")
-else
-    print("Объект 'Ring' не найден.")
-end
-end
+local Section = Tab:NewSection("Anti Ring(you cant slap bob)")
+
+Section:NewToggle("Anti Ring", "Antis", function(state)
+    if state then
+        _G.antirings = true
+
+        while _G.antirings == true do
+            local ring = game.Workspace:FindFirstChild("Ring")
+            if ring then
+            ring:Destroy()
+            end
+        task.wait()
+        end
+    else
+        _G.antirings = false
+
+        while _G.antirings == true do
+            print(12312)
+        task.wait()
+        end
+    end
 end)
 
-Section:NewButton("Auto Slap Bob", "Antis", function()
-    while task.wait(0.1) do
-local Event = game:GetService("Workspace").bobBoss.DamageEvent Event:FireServer()
-end
+local Tab = Window:NewTab("Combat")
+
+local Section = Tab:NewSection("Auto Slap Bob")
+
+Section:NewToggle("Auto Slap Bob", "Antis", function(state)
+    if state then
+        _G.slapbob = true
+
+        while _G.slapbob == true do task.wait(0.1)
+            local Event = game:GetService("Workspace").bobBoss.DamageEvent Event:FireServer()
+        end
+    else
+        _G.slapbob = false
+
+        while _G.slapbob == true do
+            print(152)
+        end
+    end
 end)
 
 Section:NewButton("Inf yeild", "Antis", function()
