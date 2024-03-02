@@ -1599,7 +1599,7 @@ Section:NewToggle("Auto Slap Bob", "Antis", function(state)
         _G.slapbob = true
 
         while _G.slapbob == true do task.wait(0.1)
-            local Event = game:GetService("Workspace").bobBoss.DamageEvent Event:FireServer()
+            workspace:WaitForChild("bobBoss"):WaitForChild("DamageEvent"):FireServer()
         end
     else
         _G.slapbob = false
