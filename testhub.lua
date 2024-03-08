@@ -2219,7 +2219,15 @@ end)
 end
 
 wait(0.2)
-    function Kavo:ToggleUIGui(Toggles)
+    function Kavo:ToggleUI()
+    if game.CoreGui[LibName].Enabled then
+        game.CoreGui[LibName].Enabled = false
+    else
+        game.CoreGui[LibName].Enabled = true
+    end
+end
+
+function Kavo:ToggleUIGui(Toggles)
 Toggles.Icons = Toggles.Icons or "rbxassetid://4384403532"
 
 local gui = Instance.new("ScreenGui", game.CoreGui)
