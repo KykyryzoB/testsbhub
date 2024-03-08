@@ -2219,4 +2219,6 @@ end)
 end
 
 wait(0.2)
-Library:ToggleUIGui()
+    Library:ToggleUIGui({
+      Icons = "rbxassetid://7733936115"
+})
