@@ -944,6 +944,43 @@ end)
 
 local Tab = Window:NewTab("Combat")
 
+local Section = Tab:NewSection("Auto Win(On Slap Aura and remove Acid,Lava)")
+
+Section:NewToggle("Auto Win", "Имба", function(state)
+    if state then
+        _G.autowinsr = true
+
+        while _G.autowinsr == true do
+         if game.Players.LocalPlayer.Character:WaitForChild("inMatch").Value == true then
+            for _, v in pairs(game.Players:GetPlayers()) do
+                if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") then
+                    while v.Character:IsDescendantOf(workspace) and v.Character.Humanoid.Health > 1 do
+                        wait(0.1)
+                        tweenService, tweenInfo =
+                            game:GetService("TweenService"),
+                            TweenInfo.new(.5, Enum.EasingStyle.Linear)
+                        tween =
+                            tweenService:Create(
+                            game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart,
+                            tweenInfo,
+                            {CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 5, 0)}
+                        )
+                        tween:Play()
+                        wait(0.2)
+                    end
+                end
+            end
+         end
+        end
+    else
+        _G.autowinsr = false
+
+        while _G.autowinsr == true do
+            print(1312)
+        end
+    end
+end)
+
 local Section = Tab:NewSection("Slap Aura")
 
 Section:NewToggle("Slap Aura", "ToggleInfo", function(state)
