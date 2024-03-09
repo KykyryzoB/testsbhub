@@ -2217,31 +2217,3 @@ end
 end)
 
 end
-
-wait(0.2)
-    function Kavo:ToggleUI()
-    if game.CoreGui[LibName].Enabled then
-        game.CoreGui[LibName].Enabled = false
-    else
-        game.CoreGui[LibName].Enabled = true
-    end
-end
-
-function Kavo:ToggleUIGui(Toggles)
-Toggles.Icons = Toggles.Icons or "rbxassetid://4384403532"
-
-local gui = Instance.new("ScreenGui", game.CoreGui)
-local ToggleUi = Instance.new("ImageButton",gui)
-local ToggleUiGui = Instance.new("UICorner",ToggleUi)
-
-ToggleUi.Size = UDim2.new(0, 40, 0, 40)
-ToggleUi.Position = UDim2.new(0,100,0,60)
-ToggleUi.BackgroundColor3 = Color3.fromRGB(53, 52, 55)
-ToggleUi.Image = Toggles.Icons
-ToggleUi.Active = true
-ToggleUi.Draggable = true
-
-ToggleUi.MouseButton1Down:connect(function()
-game.CoreGui[LibName].Enabled = not game.CoreGui[LibName].Enabled
-end)
-end
