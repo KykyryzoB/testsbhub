@@ -966,7 +966,7 @@ Section:NewButton("Auto Win", "Имба", function()
                             {CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 2, 0)}
                         )
                         tween:Play()
-                        wait(0.2)
+                        wait(0.25)
                             end
                     end
                 end
