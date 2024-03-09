@@ -1580,7 +1580,7 @@ local Tab = Window:NewTab("Misc")
 
 local Section = Tab:NewSection("Auto Tycoon")
 
-Section:NewToggle("Auto Tycoon", "Antis", function(state)
+Section:NewToggle("Auto Tycoonf", "Antis", function(state)
     if state then
         _G.autotyconbob = true
 
@@ -1592,11 +1592,10 @@ Section:NewToggle("Auto Tycoon", "Antis", function(state)
             if click then
                 local clickDetector = click:FindFirstChildOfClass("ClickDetector")
                     if clickDetector then
-                        clickDetector:Fire()
+                        fireclickdetector(clickDetector)
                     end
             end
             end
-        findAndFireClickDetector()
         task.wait()
         end
     else
@@ -1617,7 +1616,7 @@ Section:NewToggle("Anti Void", "Antis", function(state)
     if state then
 local block = Instance.new("Part")
 block.Name = "Anti Void Bob"
-block.Size = Vector3.new(2500, 16, 1140) 
+block.Size = Vector3.new(2500, 18, 1140) 
 block.Transparency = 0.4
 block.CanCollide = true 
 block.Anchored = true 
