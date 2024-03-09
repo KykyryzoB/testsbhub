@@ -962,7 +962,7 @@ Section:NewButton("Auto Win", "Имба", function()
                             tweenService:Create(
                             game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart,
                             tweenInfo,
-                            {CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 5, 0)}
+                            {CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 2, 0)}
                         )
                         tween:Play()
                         wait(0.2)
@@ -1181,8 +1181,8 @@ Section:NewToggle("Get All Items", "Misc", function(state)
         while _G.GetItems == true do wait(0.2)
             if game.Players.LocalPlayer.Character:WaitForChild("inMatch").Value == true then
                 for _, v in ipairs(game.Workspace.Items:GetChildren()) do
-                    if v:IsA("Tool") and v:FindFirstChild("Handle") then
-                        game:GetService("ReplicatedStorage").Events.Item:FireServer(v.Handle)
+                    if v:IsA("Tool") and v:FindFirstChild("Script") then
+                        game:GetService("ReplicatedStorage").Events.Item:FireServer(v.Script)
                     end
                 end
             end
