@@ -1,4 +1,4 @@
-local block = Instance.new("Part")
+\local block = Instance.new("Part")
 block.Name = "SafePort15"
 block.Size = Vector3.new(100, 10, 100) 
 block.Transparency = 0.5 
@@ -946,8 +946,7 @@ local Tab = Window:NewTab("Combat")
 
 local Section = Tab:NewSection("Auto Win(On Slap Aura and remove Acid,Lava)")
 
-Section:NewToggle("Auto Win", "Имба", function(state)
-    if state then
+Section:NewButton("Auto Win", "Имба", function()
         _G.autowinsr = true
 
         while _G.autowinsr == true do
@@ -972,13 +971,6 @@ Section:NewToggle("Auto Win", "Имба", function(state)
             end
          end
         end
-    else
-        _G.autowinsr = false
-
-        while _G.autowinsr == true do
-            print(1312)
-        end
-    end
 end)
 
 local Section = Tab:NewSection("Slap Aura")
