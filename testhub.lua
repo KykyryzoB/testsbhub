@@ -1580,7 +1580,7 @@ local Tab = Window:NewTab("Misc")
 
 local Section = Tab:NewSection("Auto Tycoon")
 
-Section:NewToggle("Auto Tycoonp", "Antis", function(state)
+Section:NewToggle("Auto TycoonЭ", "Antis", function(state)
     if state then
         _G.autotyconbob = true
 
@@ -1591,7 +1591,6 @@ Section:NewToggle("Auto Tycoonp", "Antis", function(state)
         if clickDetector then
             fireclickdetector(clickDetector)
             clickDetector.MouseClick:Connect(function()
-                print("Клик был обнаружен на объекте 'Click'!")
             end)
         end
     end
