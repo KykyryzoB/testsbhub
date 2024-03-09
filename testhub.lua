@@ -953,7 +953,8 @@ Section:NewButton("Auto Win", "Имба", function()
          if game.Players.LocalPlayer.Character:WaitForChild("inMatch").Value == true then
             for _, v in pairs(game.Players:GetPlayers()) do
                 if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") then
-                    while v.Character:IsDescendantOf(workspace) and v.Character.Humanoid.Health > 1 do
+                    if v ~= nil and v.Character ~= nil then
+                            while v.Character:IsDescendantOf(workspace) and v.Character.Humanoid.Health > 1 do
                         wait(0.1)
                         tweenService, tweenInfo =
                             game:GetService("TweenService"),
@@ -966,6 +967,7 @@ Section:NewButton("Auto Win", "Имба", function()
                         )
                         tween:Play()
                         wait(0.2)
+                            end
                     end
                 end
             end
