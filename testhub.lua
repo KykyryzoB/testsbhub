@@ -914,7 +914,7 @@ local bypass;
         return bypass(method, ...)
     end)
 
-local Window = Library.CreateLib("KykypyzoB Hub SR", "DarkTheme")
+local Window = Library.CreateLib("KykypyzoB Hub | Slap Royale", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
