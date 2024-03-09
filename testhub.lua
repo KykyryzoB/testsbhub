@@ -1,4 +1,4 @@
-\local block = Instance.new("Part")
+local block = Instance.new("Part")
 block.Name = "SafePort15"
 block.Size = Vector3.new(100, 10, 100) 
 block.Transparency = 0.5 
