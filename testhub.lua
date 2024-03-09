@@ -1,4 +1,4 @@
-local block = Instance.new("Part")
+\local block = Instance.new("Part")
 block.Name = "SafePort15"
 block.Size = Vector3.new(100, 10, 100) 
 block.Transparency = 0.5 
@@ -966,7 +966,7 @@ Section:NewToggle("Auto Win", "Имба", function(state)
                             {CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 5, 0)}
                         )
                         tween:Play()
-                        wait(0.2)
+                        wait(0.1)
                     end
                 end
             end
