@@ -1580,22 +1580,22 @@ local Tab = Window:NewTab("Misc")
 
 local Section = Tab:NewSection("Auto Tycoon")
 
-Section:NewToggle("Auto Tycoonf", "Antis", function(state)
+Section:NewToggle("Auto Tycoony", "Antis", function(state)
     if state then
         _G.autotyconbob = true
 
         while _G.autotyconbob == true do
-            local workspace = game:GetService("Workspace")
-
-            local function findAndFireClickDetector()
-            local click = workspace:FindFirstChild("Click")
-            if click then
-                local clickDetector = click:FindFirstChildOfClass("ClickDetector")
-                    if clickDetector then
-                        fireclickdetector(clickDetector)
-                    end
-            end
-            end
+            for _, v in pairs(game:GetDescendants()) do
+    if v.Name == "Click" then
+        local clickDetector = v:FindFirstChildOfClass("ClickDetector")
+        if clickDetector then
+            fireclickdetector(clickDetector)
+            clickDetector.MouseClick:Connect(function()
+                print("Клик был обнаружен на объекте 'Click'!")
+            end)
+        end
+    end
+end
         task.wait()
         end
     else
@@ -1616,7 +1616,7 @@ Section:NewToggle("Anti Void", "Antis", function(state)
     if state then
 local block = Instance.new("Part")
 block.Name = "Anti Void Bob"
-block.Size = Vector3.new(2500, 18, 1140) 
+block.Size = Vector3.new(2500, 16, 1140) 
 block.Transparency = 0.4
 block.CanCollide = true 
 block.Anchored = true 
@@ -1630,7 +1630,7 @@ end
    end
 end)
 
-local Section = Tab:NewSection("Anti Ring(you cant slap bob)")
+local Section = Tab:NewSection("Anti Ring")
 
 Section:NewToggle("Anti Ring", "Antis", function(state)
     if state then
