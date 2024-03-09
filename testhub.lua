@@ -1580,11 +1580,11 @@ local Tab = Window:NewTab("Misc")
 
 local Section = Tab:NewSection("Auto Tycoon")
 
-Section:NewToggle("Auto Tycoony", "Antis", function(state)
+Section:NewToggle("Auto Tycoonp", "Antis", function(state)
     if state then
         _G.autotyconbob = true
 
-        while _G.autotyconbob == true do
+        while _G.autotyconbob == true do wait(1)
             for _, v in pairs(game:GetDescendants()) do
     if v.Name == "Click" then
         local clickDetector = v:FindFirstChildOfClass("ClickDetector")
