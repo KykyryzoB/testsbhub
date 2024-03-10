@@ -1582,16 +1582,17 @@ Section:NewToggle("Auto Tycoon", "Antis", function(state)
     if state then
         _G.autotyconbob = true
 
-        while _G.autotyconbob == true do wait(0.5)
+        while _G.autotyconbob == true do wait(0.15)
             for _, v in pairs(game:GetDescendants()) do
     if v.Name == "Click" then
         local clickDetector = v:FindFirstChildOfClass("ClickDetector")
         if clickDetector then
             fireclickdetector(clickDetector)
+                clickDetector.MouseClick:Connect(function()
+            end)
         end
     end
 end
-        task.wait()
         end
     else
         _G.autotyconbob = false
@@ -1631,19 +1632,17 @@ Section:NewToggle("Anti Ring", "Antis", function(state)
     if state then
         _G.antirings = true
 
-        while _G.antirings == true do wait(0.45)
+        while _G.antirings == true do wait(0.1)
             local ring = game.Workspace:FindFirstChild("Ring")
             if ring then
             ring:Destroy()
             end
-        task.wait()
         end
     else
         _G.antirings = false
 
-        while _G.antirings == true do wait(0.45)
+        while _G.antirings == true do wait(0.1)
             print(12312)
-        task.wait()
         end
     end
 end)
@@ -2257,3 +2256,7 @@ end
 end)
 
 end
+
+Library:ToggleUIGui({
+      Icons = "rbxassetid://4384403532"
+})
