@@ -1582,14 +1582,12 @@ Section:NewToggle("Auto Tycoon", "Antis", function(state)
     if state then
         _G.autotyconbob = true
 
-        while _G.autotyconbob == true do wait(1)
+        while _G.autotyconbob == true do wait(0.5)
             for _, v in pairs(game:GetDescendants()) do
     if v.Name == "Click" then
         local clickDetector = v:FindFirstChildOfClass("ClickDetector")
         if clickDetector then
             fireclickdetector(clickDetector)
-            clickDetector.MouseClick:Connect(function()
-            end)
         end
     end
 end
