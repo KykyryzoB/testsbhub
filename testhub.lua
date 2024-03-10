@@ -1,3 +1,5 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcom",Text = "Welcom to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
+----------------------------------------------------------------------------------------
 local block = Instance.new("Part")
 block.Name = "SafePort15"
 block.Size = Vector3.new(100, 10, 100) 
@@ -1656,7 +1658,7 @@ Section:NewToggle("Slap Aura (MiniBOB)", "Antis", function(state)
         _G.slapminibob = true
 
         while _G.slapminibob == true do
-                if game.Players.LocalPlayer.leaderstats.Glove == "Reaper" then
+                if game.Players.LocalPlayer.leaderstats.Glove.Value == "Reaper" then
             local Workspace = game:GetService("Workspace")
             local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -1669,7 +1671,7 @@ Section:NewToggle("Slap Aura (MiniBOB)", "Antis", function(state)
 
             local reaperHit = ReplicatedStorage:WaitForChild("ReaperHit")
             reaperHit:FireServer(unpack(args))
-                elseif game.Players.LocalPlayer.leaderstats.Glove == "Killstreak" then
+                elseif game.Players.LocalPlayer.leaderstats.Glove.Value == "Killstreak" then
                     local Workspace = game:GetService("Workspace")
             local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
