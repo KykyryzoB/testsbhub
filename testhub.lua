@@ -23,7 +23,7 @@ local bypass;
         return bypass(method, ...)
     end)
 
-local Window = Library.CreateLib("KykyryzoB Hub SB", "DarkTheme")
+local Window = Library.CreateLib("KykyryzoB Hub | Slap Battles", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -946,20 +946,20 @@ local Tab = Window:NewTab("Combat")
 
 local Section = Tab:NewSection("Auto Win(On Slap Aura and remove Acid,Lava)")
 
-Section:NewButton("Auto Win", "Имба", function()
+Section:NewButton("Auto Win", "мороз гей", function()
         _G.autowinsr = true
 
-        while _G.autowinsr == true do
-         if game.Players.LocalPlayer.Character:WaitForChild("inMatch").Value == true then
-            for _, v in pairs(game.Players:GetPlayers()) do
-                if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") then
-                    if v ~= nil and v.Character ~= nil then
-                            while v.Character:IsDescendantOf(workspace) and v.Character.Humanoid.Health > 1 do
+while _G.autowinsr == true do
+    if game.Players.LocalPlayer.Character:WaitForChild("inMatch").Value == true then
+        for _, v in pairs(game.Players:GetPlayers()) do
+            if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") then
+                if v.Character:FindFirstChild("HumanoidRootPart") then
+                    while v.Character:IsDescendantOf(workspace) and v.Character.Humanoid.Health > 1 do
                         wait(0.1)
-                        tweenService, tweenInfo =
+                        local tweenService, tweenInfo =
                             game:GetService("TweenService"),
                             TweenInfo.new(.5, Enum.EasingStyle.Linear)
-                        tween =
+                        local tween =
                             tweenService:Create(
                             game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart,
                             tweenInfo,
@@ -967,12 +967,12 @@ Section:NewButton("Auto Win", "Имба", function()
                         )
                         tween:Play()
                         wait(0.25)
-                            end
                     end
                 end
             end
-         end
         end
+    end
+end
 end)
 
 local Section = Tab:NewSection("Slap Aura")
@@ -1326,7 +1326,7 @@ end
 
 if game.PlaceId == 9020359053 then
 
-local Window = Library.CreateLib("KykypyzoB Hub SB Test Server", "DarkTheme")
+local Window = Library.CreateLib("KykypyzoB Hub | SB Test Server", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -1437,7 +1437,7 @@ end
 
 if game.PlaceId == 9412268818 then
 
-local Window = Library.CreateLib("KykypyzoB Hub SR Test Server", "DarkTheme")
+local Window = Library.CreateLib("KykypyzoB Hub | SR Test Server", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -1548,7 +1548,7 @@ end
 
 if game.PlaceId == 13833961666 then
 
-local Window = Library.CreateLib("KykyryzoB Hub Enternal Bob", "DarkTheme")
+local Window = Library.CreateLib("KykyryzoB Hub | The Dark Realms", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -1580,7 +1580,7 @@ local Tab = Window:NewTab("Misc")
 
 local Section = Tab:NewSection("Auto Tycoon")
 
-Section:NewToggle("Auto TycoonЭ", "Antis", function(state)
+Section:NewToggle("Auto Tycoon", "Antis", function(state)
     if state then
         _G.autotyconbob = true
 
@@ -1600,7 +1600,7 @@ end
     else
         _G.autotyconbob = false
 
-        while _G.autotyconbob == true do
+        while _G.autotyconbob == true do  wait(1)
             print(1231)
         task.wait()
         end
@@ -1635,7 +1635,7 @@ Section:NewToggle("Anti Ring", "Antis", function(state)
     if state then
         _G.antirings = true
 
-        while _G.antirings == true do
+        while _G.antirings == true do wait(0.45)
             local ring = game.Workspace:FindFirstChild("Ring")
             if ring then
             ring:Destroy()
@@ -1645,7 +1645,7 @@ Section:NewToggle("Anti Ring", "Antis", function(state)
     else
         _G.antirings = false
 
-        while _G.antirings == true do
+        while _G.antirings == true do wait(0.45)
             print(12312)
         task.wait()
         end
@@ -1730,7 +1730,7 @@ end
 
 if game.PlaceId == 11828384869 then
 
-local Window = Library.CreateLib("KykyryzoB Hub Elude Maze", "DarkTheme")
+local Window = Library.CreateLib("KykyryzoB Hub | Elude Maze", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -2049,7 +2049,7 @@ end
 
 if game.PlaceId == 14422118326 then
 
-local Window = Library.CreateLib("KykyryzoB Hub The Null Zone", "Synapse")
+local Window = Library.CreateLib("KykyryzoB Hub | The Null Zone", "Synapse")
 
 local Tab = Window:NewTab("INFO")
 
@@ -2131,7 +2131,7 @@ end
 
 if game.PlaceId == 15507333474 then
 
-local Window = Library.CreateLib("KykyryzoB Hub CHRISTMAST EVENT", "Synapse")
+local Window = Library.CreateLib("KykyryzoB Hub | CHRISTMAST EVENT", "Synapse")
 
 local Tab = Window:NewTab("INFO")
 
