@@ -1657,6 +1657,7 @@ Section:NewToggle("Slap Aura (MiniBOB)", "Antis", function(state)
         _G.slapminibob = true
 
         while _G.slapminibob == true do
+                if game.Players.LocalPlayer.leaderstats.Glove == "Reaper" then
             local Workspace = game:GetService("Workspace")
             local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -1669,6 +1670,20 @@ Section:NewToggle("Slap Aura (MiniBOB)", "Antis", function(state)
 
             local reaperHit = ReplicatedStorage:WaitForChild("ReaperHit")
             reaperHit:FireServer(unpack(args))
+                elseif game.Players.LocalPlayer.leaderstats.Glove == "Killstreak" then
+                    local Workspace = game:GetService("Workspace")
+            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+            local bobClone = Workspace:WaitForChild("BobClone")
+            local leftArm = bobClone:WaitForChild("Left Arm")
+
+            local args = {
+                [1] = leftArm
+            }
+
+            local kshit = ReplicatedStorage:WaitForChild("KSHit")
+            KSHit:FireServer(unpack(args))
+                end
         task.wait()
         end
     else
