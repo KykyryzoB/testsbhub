@@ -1678,7 +1678,7 @@ Section:NewToggle("Slap Aura (MiniBOB)", "Antis", function(state)
             }
 
             local kshit = ReplicatedStorage:WaitForChild("KSHit")
-            KSHit:FireServer(unpack(args))
+            kshit:FireServer(unpack(args))
                 end
         task.wait()
         end
