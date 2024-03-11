@@ -1080,7 +1080,7 @@ local Tab = Window:NewTab("Antis")
 
 local Section = Tab:NewSection("Anti Cube of Ice,Glacier")
 
-Section:NewToggle("Anti Lava", "Antis", function(state)
+Section:NewToggle("Anti Ice", "Antis", function(state)
     if state then
         _G.antiglacier = true
 
