@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcom",Text = "Welcom to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcome!",Text = "Welcome to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
 ----------------------------------------------------------------------------------------
 local block = Instance.new("Part")
 block.Name = "SafePort15"
@@ -25,7 +25,7 @@ local bypass;
         return bypass(method, ...)
     end)
 
-local Window = Library.CreateLib("KykyryzoB Hub | Slap Battles", "DarkTheme")
+local Window = Library.CreateLib("Kykyryz0B Hub | Slap Battles", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -411,7 +411,7 @@ wait(0.1)
 end
 end)
 
-local Section = Tab:NewSection("Spam Scythe (Spam Scythe)")
+local Section = Tab:NewSection("Spam Scythe (Need Scythe)")
 
 Section:NewToggle("Spam Scythe", "ToggleInfo", function(state)
     if state then
@@ -490,8 +490,6 @@ if closestPlayer then
     }
     
     game:GetService("ReplicatedStorage"):WaitForChild("GeneralAbility"):FireServer(unpack(args))
-else
-    print("No closest player found")
 end
 end
     end
@@ -916,7 +914,7 @@ local bypass;
         return bypass(method, ...)
     end)
 
-local Window = Library.CreateLib("KykypyzoB Hub | Slap Royale", "DarkTheme")
+local Window = Library.CreateLib("Kykypyz0B Hub | Slap Royale", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -1326,7 +1324,7 @@ end
 
 if game.PlaceId == 9020359053 then
 
-local Window = Library.CreateLib("KykypyzoB Hub | SB Test Server", "DarkTheme")
+local Window = Library.CreateLib("Kykypyz0B Hub | SB Test Server", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -1437,7 +1435,7 @@ end
 
 if game.PlaceId == 9412268818 then
 
-local Window = Library.CreateLib("KykypyzoB Hub | SR Test Server", "DarkTheme")
+local Window = Library.CreateLib("Kykypyz0B Hub | SR Test Server", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -1548,7 +1546,7 @@ end
 
 if game.PlaceId == 13833961666 then
 
-local Window = Library.CreateLib("KykyryzoB Hub | The Dark Realms", "DarkTheme")
+local Window = Library.CreateLib("Kykyryz0B Hub | The Dark Realms", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -1742,7 +1740,7 @@ end
 
 if game.PlaceId == 11828384869 then
 
-local Window = Library.CreateLib("KykyryzoB Hub | Elude Maze", "DarkTheme")
+local Window = Library.CreateLib("Kykyryz0B Hub | Elude Maze", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -2061,7 +2059,7 @@ end
 
 if game.PlaceId == 14422118326 then
 
-local Window = Library.CreateLib("KykyryzoB Hub | The Null Zone", "Synapse")
+local Window = Library.CreateLib("Kykyryz0B Hub | The Null Zone", "Synapse")
 
 local Tab = Window:NewTab("INFO")
 
@@ -2143,7 +2141,7 @@ end
 
 if game.PlaceId == 15507333474 then
 
-local Window = Library.CreateLib("KykyryzoB Hub | CHRISTMAST EVENT", "Synapse")
+local Window = Library.CreateLib("Kykyryz0B Hub | CHRISTMAST EVENT", "Synapse")
 
 local Tab = Window:NewTab("INFO")
 
