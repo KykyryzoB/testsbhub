@@ -243,6 +243,7 @@ Section:NewToggle("Remove NameTag", "ToggleInfo", function(state)
 game.Players.LocalPlayer.Character.Head.Nametag.TextLabel.Visible = false
 end
     else
+        game.Players.LocalPlayer.Character.Head.Nametag.TextLabel.Visible = true
         _G.rname = false
         
         while _G.rname == true do wait()
