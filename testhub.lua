@@ -1583,22 +1583,18 @@ Section:NewToggle("Auto Tycoon", "Antis", function(state)
     if state then
         _G.autotyconbob = true
 
-        while _G.autotyconbob == true do wait(0.15)
-            for _, v in pairs(game:GetDescendants()) do
-    if v.Name == "Click" then
-        local clickDetector = v:FindFirstChildOfClass("ClickDetector")
-        if clickDetector then
-            fireclickdetector(clickDetector)
-                clickDetector.MouseClick:Connect(function()
-            end)
-        end
-    end
-end
+        while _G.autotyconbob == true do
+            for i,v in pairs(workspace:GetDescendants()) do
+                if v.Name == "Click" and v:FindFirstChild("ClickDetector") then
+            fireclickdetector(v.ClickDetector)
+            end
+                end
+        task.wait()
         end
     else
         _G.autotyconbob = false
 
-        while _G.autotyconbob == true do  wait(1)
+        while _G.autotyconbob == true do
             print(1231)
         task.wait()
         end
@@ -1633,7 +1629,7 @@ Section:NewToggle("Anti Ring", "Antis", function(state)
     if state then
         _G.antirings = true
 
-        while _G.antirings == true do wait(0.1)
+        while _G.antirings == true do task.wait(0.1)
             local ring = game.Workspace:FindFirstChild("Ring")
             if ring then
             ring:Destroy()
@@ -1642,7 +1638,7 @@ Section:NewToggle("Anti Ring", "Antis", function(state)
     else
         _G.antirings = false
 
-        while _G.antirings == true do wait(0.1)
+        while _G.antirings == true do task.wait(0.1)
             print(12312)
         end
     end
