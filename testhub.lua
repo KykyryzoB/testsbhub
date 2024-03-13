@@ -418,13 +418,13 @@ Section:NewToggle("Spam Null", "ToggleInfo", function(state)
     if state then
         _G.Nullspam = true
 
-        while _G.Nullspam == true do wait(15)
+        while _G.Nullspam == true do 
             game:GetService("ReplicatedStorage"):WaitForChild("NullAbility"):FireServer()
         end
     else
         _G.Nullspam = false
 
-        while _G.Nullspam == true do wait(15)
+        while _G.Nullspam == true do task.wait(0.25)
             print(12)
         end
     end
@@ -1160,8 +1160,7 @@ block.CanCollide = true
 block.Anchored = true 
 block.Position = Vector3.new(-674.9874267578125, -159.50196838378906, -263.7173156738281)
 block.Parent = game.Workspace
-    else
-        
+    else 
 local block = game.Workspace:FindFirstChild("AntiVoidSR")
 if block then
     block:Destroy()
@@ -1221,8 +1220,8 @@ Section:NewToggle("Get All Items", "Misc", function(state)
         while _G.GetItems == true do wait(0.2)
             if game.Players.LocalPlayer.Character:WaitForChild("inMatch").Value == true then
                 for _, v in ipairs(game.Workspace.Items:GetChildren()) do
-                    if v:IsA("Tool") and v:FindFirstChild("Script") then
-                        game:GetService("ReplicatedStorage").Events.Item:FireServer(v.Script)
+                    if v:IsA("Tool") and v:FindFirstChild("Handle") then
+                        game:GetService("ReplicatedStorage").Events.Item:FireServer(v.Handle)
                     end
                 end
             end
@@ -1313,6 +1312,7 @@ local Section = Tab:NewSection("Unlock Lab")
 
 Section:NewButton("Unlock Lab", "Misc", function()
     if game.Workspace.Map.CodeBrick.SurfaceGui:FindFirstChild("IMGTemplate") then
+        fireclickdetector(workspace.Map.OriginOffice.Door.Keypad.Buttons.Reset.ClickDetector)
 game.Workspace.Map.CodeBrick.SurfaceGui.IMGTemplate.Name = "1st"
 game.Workspace.Map.CodeBrick.SurfaceGui.IMGTemplate.Name = "2nd"
 game.Workspace.Map.CodeBrick.SurfaceGui.IMGTemplate.Name = "3rd"
@@ -1795,9 +1795,9 @@ Section:NewToggle("Auto Tycoon", "Antis", function(state)
         while _G.autotyconbob == true do
             for i,v in pairs(workspace:GetDescendants()) do
                 if v.Name == "Click" and v:FindFirstChild("ClickDetector") then
-            fireclickdetector(v.ClickDetector)
-            end
+                    fireclickdetector(v.ClickDetector)
                 end
+            end
         task.wait()
         end
     else
@@ -1917,10 +1917,6 @@ Section:NewToggle("Auto Slap Bob", "Antis", function(state)
         end
     end
 end)
-
-Section:NewButton("Inf yeild", "Antis", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)    
 
 local Tab = Window:NewTab("Player")
 
