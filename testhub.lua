@@ -418,7 +418,7 @@ Section:NewToggle("Spam Null", "ToggleInfo", function(state)
     if state then
         _G.Nullspam = true
 
-        while _G.Nullspam == true do task.wait(0.25)
+        while _G.Nullspam == true do 
             game:GetService("ReplicatedStorage"):WaitForChild("NullAbility"):FireServer()
         end
     else
@@ -1077,6 +1077,27 @@ end
 end)
 
 local Tab = Window:NewTab("Antis")
+
+local Section = Tab:NewSection("Anti Cube of Ice,Glacier")
+
+Section:NewToggle("Anti Ice", "Antis", function(state)
+    if state then
+        _G.antiglacier = true
+
+        while _G.antiglacier == true do task.wait(0.25)
+            local player = game.Players.LocalPlayer
+            if player and player.Character and player.Character:FindFirstChild("Icecube") then
+                player.Character.Icecube:Destroy()
+            end
+        end
+    else
+        _G.antiglacier = false
+
+        while _G.antiglacier == true do task.wait(0.25)
+            print(23)
+        end
+    end
+end)
 
 local Section = Tab:NewSection("Anti Lava")
 
@@ -1820,9 +1841,9 @@ Section:NewToggle("Auto Tycoon", "Antis", function(state)
         while _G.autotyconbob == true do
             for i,v in pairs(workspace:GetDescendants()) do
                 if v.Name == "Click" and v:FindFirstChild("ClickDetector") then
-                    fireclickdetector(v.ClickDetector)
-                end
+            fireclickdetector(v.ClickDetector)
             end
+                end
         task.wait()
         end
     else
@@ -1942,6 +1963,10 @@ Section:NewToggle("Auto Slap Bob", "Antis", function(state)
         end
     end
 end)
+
+Section:NewButton("Inf yeild", "Antis", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)    
 
 local Tab = Window:NewTab("Player")
 
