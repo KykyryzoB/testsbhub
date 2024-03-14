@@ -5,7 +5,7 @@ WELCOME TO HUB
 ████      ███    ████      ███    ████      ███    ███     ███      ██    █ █ █  ████
 ██ ██      █     ██ ██      █     ██ ██      █     ██       █     ██      █  ██  █   █
 ██  ██     █     ██  ██     █     ██  ██     █     █ █      █     ██████   ███   ████
-]]
+]]--
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcome!",Text = "Welcome to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
 ----------------------------------------------------------------------------------------
 local block = Instance.new("Part")
