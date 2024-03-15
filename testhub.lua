@@ -914,12 +914,8 @@ local Section = Tab:NewSection("TroXer")
 Section:NewButton("TroXer-Hub", "Others Hub", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CrismonPetrasion/TroXer-Hub/main/Testing"))()
 end)
-
-end
-
-if game.PlaceId == 9431156611 then
-
-local bypass;
+elseif game.PlaceId == 9431156611 then
+    local bypass;
     bypass = hookmetamethod(game, "__namecall", function(method, ...) 
         if getnamecallmethod() == "FireServer" and method == game.ReplicatedStorage.Events.Ban then
             return
@@ -1237,52 +1233,6 @@ Section:NewToggle("Get All Items", "Misc", function(state)
     end
 end)
 
-local Section = Tab:NewSection("Item Esp")
-
-Section:NewToggle("Item Esp", "Misc", function(state)
-    if state then
-        _G.itemsespSR = true
-
-while _G.itemsespSR == true do wait(2)
-                            _G.removingsritems = false
-
-                        while _G.removingsr == true do wait(1)
-                            print(dasd)
-                        end
-                        for i, v in ipairs(game.Workspace.Items:GetChildren()) do
-    if v.ClassName == "Tool" and v:FindFirstChild("Handle") then
-        espitemsr = Instance.new("BillboardGui", v.Handle)
-        espitemsr.Adornee = v.Handle
-        espitemsr.Name = "espitemsr"
-        espitemsr.Size = UDim2.new(0, 100, 0, 150)
-        espitemsr.StudsOffset = Vector3.new(0, 1, 0)
-        espitemsr.AlwaysOnTop = true
-        espitemsr.StudsOffset = Vector3.new(0, 3, 0)
-        textitemsr = Instance.new("TextLabel", espitemsr)
-        textitemsr.BackgroundTransparency = 1
-        textitemsr.Size = UDim2.new(0, 100, 0, 100)
-        textitemsr.TextSize = 15
-        textitemsr.Font = Enum.Font.SourceSansSemibold
-        textitemsr.TextColor3 = Color3.fromRGB(0,0,255)
-        textitemsr.TextStrokeTransparency = 0
-        textitemsr.Text = v.Name
-    end
-                        end
-end
-    else
-        _G.removingsritems = true
-
-        while _G.removingsritems == true do wait(1)
-            _G.itemsespSR = false
-
-            while _G.itemsespSR == true do wait(2)
-                if v.ClassName == "Tool" and v:FindFirstChild("Handle") and v.Handle:FindFirstChild("espitemsr") then
-                    v.Handle.espitemsr:Destroy()
-                end
-            end
-    end
-end)
-
 local Section = Tab:NewSection("Esp")
 
 Section:NewToggle("Esp", "Misc", function(state)
@@ -1576,11 +1526,8 @@ Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
     workspace.Gravity = txt
 end)
 
-end
-
-if game.PlaceId == 9020359053 then
-
-local Window = Library.CreateLib("Kykypyz0B Hub | SB Test Server", "DarkTheme")
+elseif game.PlaceId == 9020359053 then
+    local Window = Library.CreateLib("Kykypyz0B Hub | SB Test Server", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -1687,11 +1634,8 @@ end
 game:GetService("TeleportService"):Teleport(9412268818)
 end)
 
-end
-
-if game.PlaceId == 9412268818 then
-
-local Window = Library.CreateLib("Kykypyz0B Hub | SR Test Server", "DarkTheme")
+elseif game.PlaceId == 9412268818 then
+    local Window = Library.CreateLib("Kykypyz0B Hub | SR Test Server", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -1798,11 +1742,8 @@ end
 game:GetService("TeleportService"):Teleport(9020359053)
 end)
 
-end
-
-if game.PlaceId == 13833961666 then
-
-local Window = Library.CreateLib("Kykyryz0B Hub | The Dark Realms", "DarkTheme")
+elseif game.PlaceId == 13833961666 then
+    local Window = Library.CreateLib("Kykyryz0B Hub | The Dark Realms", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -1964,10 +1905,6 @@ Section:NewToggle("Auto Slap Bob", "Antis", function(state)
     end
 end)
 
-Section:NewButton("Inf yeild", "Antis", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)    
-
 local Tab = Window:NewTab("Player")
 
 local Section = Tab:NewSection("Speed Hack")
@@ -1988,11 +1925,8 @@ Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
     workspace.Gravity = txt
 end)
 
-end
-
-if game.PlaceId == 11828384869 then
-
-local Window = Library.CreateLib("Kykyryz0B Hub | Elude Maze", "DarkTheme")
+elseif game.PlaceId == 11828384869 then
+    local Window = Library.CreateLib("Kykyryz0B Hub | Elude Maze", "DarkTheme")
 
 local Tab = Window:NewTab("INFO")
 
@@ -2307,11 +2241,8 @@ Section:NewButton("Get Elude", "Home", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-502.335632, 14.2279472, -179.596512, 1, 0, 0, 0, -0.965929747, 0.258804798, 0, -0.258804798, -0.965929747)
 end)
 
-end
-
-if game.PlaceId == 14422118326 then
-
-local Window = Library.CreateLib("Kykyryz0B Hub | The Null Zone", "Synapse")
+elseif game.PlaceId == 14422118326 then
+    local Window = Library.CreateLib("Kykyryz0B Hub | The Null Zone", "Synapse")
 
 local Tab = Window:NewTab("INFO")
 
@@ -2389,11 +2320,8 @@ wait(0.2)
 fireclickdetector(workspace:GetChildren()[13].Handle.ClickDetector)
 end)
 
-end
-
-if game.PlaceId == 15507333474 then
-
-local Window = Library.CreateLib("Kykyryz0B Hub | CHRISTMAST EVENT", "Synapse")
+elseif game.PlaceId == 15507333474 then
+    local Window = Library.CreateLib("Kykyryz0B Hub | CHRISTMAST EVENT", "Synapse")
 
 local Tab = Window:NewTab("INFO")
 
@@ -2512,4 +2440,3 @@ end
 Library:ToggleUIGui({
       Icons = "rbxassetid://7733715400"
 })
-    
