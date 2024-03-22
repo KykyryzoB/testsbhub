@@ -1121,8 +1121,8 @@ local tween = game:GetService("TweenService"):Create(
     {CFrame = targetCFrame}
 )
 tween:Play()
-elseif waw == "Acid" then
-local targetCFrame = CFrame.new(229.818787, 18.4904289, -710.132202, 0.521155775, -0.00628923671, -0.853438377, -1.13886799e-05, 0.999972761, -0.00737603987, 0.853461623, 0.00385377603, 0.521141529)
+elseif waw == "River" then
+local targetCFrame = CFrame.new(-92.1229095, 19.935112, -228.392212, 0.401422083, 1.88215288e-09, 0.915893197, -1.69204739e-08, 1, 5.36099565e-09, -0.915893197, -1.76493682e-08, 0.401422083)
 local tween = game:GetService("TweenService"):Create(
     game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
     TweenInfo.new(2, Enum.EasingStyle.Linear),
