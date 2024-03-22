@@ -35,6 +35,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('ultramegasuperpuperdupergul')
 end)
 
+local Section = Tab:NewSection("Creator UI and Helper with function")
+
+Section:NewButton("Giangplay", "INFO", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay.",Icon = "rbxassetid://7733955511",Duration = 10})
+end)
+
 local Section = Tab:NewSection("Discord Server")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -939,6 +945,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('ultramegasuperpuperdupergul')
 end)
 
+local Section = Tab:NewSection("Creator UI and Helper with function")
+
+Section:NewButton("Giangplay", "INFO", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay.",Icon = "rbxassetid://7733955511",Duration = 10})
+end)
+
 local Section = Tab:NewSection("Discord Server")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -1516,6 +1528,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('ultramegasuperpuperdupergul')
 end)
 
+local Section = Tab:NewSection("Creator UI and Helper with function")
+
+Section:NewButton("Giangplay", "INFO", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay.",Icon = "rbxassetid://7733955511",Duration = 10})
+end)
+
 local Section = Tab:NewSection("Discord Server")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -1624,6 +1642,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('ultramegasuperpuperdupergul')
 end)
 
+local Section = Tab:NewSection("Creator UI and Helper with function")
+
+Section:NewButton("Giangplay", "INFO", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay.",Icon = "rbxassetid://7733955511",Duration = 10})
+end)
+
 local Section = Tab:NewSection("Discord Server")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -1730,6 +1754,12 @@ local Section = Tab:NewSection("Creator( if you have bug and ideas dm me)")
 
 Section:NewButton("Click to copy", "INFO", function()
     setclipboard('ultramegasuperpuperdupergul')
+end)
+
+local Section = Tab:NewSection("Creator UI and Helper with function")
+
+Section:NewButton("Giangplay", "INFO", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay.",Icon = "rbxassetid://7733955511",Duration = 10})
 end)
 
 local Section = Tab:NewSection("Discord Server")
@@ -1913,6 +1943,12 @@ local Section = Tab:NewSection("Creator( if you have bug and ideas dm me)")
 
 Section:NewButton("Click to copy", "INFO", function()
     setclipboard('ultramegasuperpuperdupergul')
+end)
+
+local Section = Tab:NewSection("Creator UI and Helper with function")
+
+Section:NewButton("Giangplay", "INFO", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay.",Icon = "rbxassetid://7733955511",Duration = 10})
 end)
 
 local Section = Tab:NewSection("Discord Server")
@@ -2231,6 +2267,12 @@ Section:NewButton("Click to copy", "INFO", function()
     setclipboard('ultramegasuperpuperdupergul')
 end)
 
+local Section = Tab:NewSection("Creator UI and Helper with function")
+
+Section:NewButton("Giangplay", "INFO", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay.",Icon = "rbxassetid://7733955511",Duration = 10})
+end)
+
 local Section = Tab:NewSection("Discord Server")
 
 Section:NewButton("Click to copy", "INFO", function()
@@ -2308,6 +2350,12 @@ local Section = Tab:NewSection("Creator( if you have bug and ideas dm me)")
 
 Section:NewButton("Click to copy", "INFO", function()
     setclipboard('ultramegasuperpuperdupergul')
+end)
+
+local Section = Tab:NewSection("Creator UI and Helper with function")
+
+Section:NewButton("Giangplay", "INFO", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay.",Icon = "rbxassetid://7733955511",Duration = 10})
 end)
 
 local Section = Tab:NewSection("Discord Server")
