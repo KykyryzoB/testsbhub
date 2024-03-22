@@ -1074,27 +1074,6 @@ end)
 
 local Tab = Window:NewTab("Antis")
 
-local Section = Tab:NewSection("Anti Cube of Ice,Glacier")
-
-Section:NewToggle("Anti Ice", "Antis", function(state)
-    if state then
-        _G.antiglacier = true
-
-        while _G.antiglacier == true do task.wait(0.25)
-            local player = game.Players.LocalPlayer
-            if player and player.Character and player.Character:FindFirstChild("Icecube") then
-                player.Character.Icecube:Destroy()
-            end
-        end
-    else
-        _G.antiglacier = false
-
-        while _G.antiglacier == true do task.wait(0.25)
-            print(23)
-        end
-    end
-end)
-
 local Section = Tab:NewSection("Anti Lava")
 
 Section:NewToggle("Anti Lava", "Antis", function(state)
