@@ -424,13 +424,13 @@ Section:NewToggle("Spam Null", "ToggleInfo", function(state)
     if state then
         _G.Nullspam = true
 
-        while _G.Nullspam == true do 
+        while _G.Nullspam == true do task.wait(0.5)
             game:GetService("ReplicatedStorage"):WaitForChild("NullAbility"):FireServer()
         end
     else
         _G.Nullspam = false
 
-        while _G.Nullspam == true do task.wait(0.25)
+        while _G.Nullspam == true do task.wait(0.5)
             print(12)
         end
     end
