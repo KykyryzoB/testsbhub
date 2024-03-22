@@ -883,16 +883,28 @@ Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
 end)
 
+Section:NewSlider("Speed Hack", "SliderInfo", 500, 20, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
 local Section = Tab:NewSection("Jump Hack")
 
 Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
 end)
 
+Section:NewSlider("Jump Hack", "SliderInfo", 500, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
 local Section = Tab:NewSection("Gravity Hack")
 
 Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
     workspace.Gravity = txt
+end)
+
+Section:NewSlider("Gravity Hack", "SliderInfo", 500, 0, function(s)
+    workspace.Gravity = s
 end)
 
 local Tab = Window:NewTab("Others Hub")
@@ -1085,6 +1097,16 @@ end
 end)
 
 local Tab = Window:NewTab("Antis")
+
+local Section = Tab:NewSection("Anti Locked Lab")
+
+Section:NewToggle("Anti Locked Lab", "Antis", function(state)
+    if state then
+        workspace.Map.OriginOffice:WaitForChild("Antiaccess").CanTouch = false
+    else
+        workspace.Map.OriginOffice:WaitForChild("Antiaccess").CanTouch = true
+    end
+end)
 
 local Section = Tab:NewSection("Anti Lava")
 
@@ -1483,6 +1505,38 @@ Section:NewButton("Leave Bus", "Misc", function()
     game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("BusJumping"):FireServer()
 end)
 
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Speed Hack")
+
+Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+end)
+
+Section:NewSlider("Speed Hack", "SliderInfo", 500, 20, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+local Section = Tab:NewSection("Jump Hack")
+
+Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+end)
+
+Section:NewSlider("Jump Hack", "SliderInfo", 500, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Section = Tab:NewSection("Gravity Hack")
+
+Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
+    workspace.Gravity = txt
+end)
+
+Section:NewSlider("Gravity Hack", "SliderInfo", 500, 0, function(s)
+    workspace.Gravity = s
+end)
+
 local Tab = Window:NewTab("Others Hub")
 
 local Section = Tab:NewSection("Guy that exsits hub")
@@ -1495,26 +1549,6 @@ local Section = Tab:NewSection("Inf Yield")
 
 Section:NewButton("Infite Yield", "Others Hub", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
-
-local Tab = Window:NewTab("Player")
-
-local Section = Tab:NewSection("Speed Hack")
-
-Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
-end)
-
-local Section = Tab:NewSection("Jump Hack")
-
-Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
-end)
-
-local Section = Tab:NewSection("Gravity Hack")
-
-Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
-    workspace.Gravity = txt
 end)
 
 elseif game.PlaceId == 9020359053 then
@@ -1922,16 +1956,28 @@ Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
 end)
 
+Section:NewSlider("Speed Hack", "SliderInfo", 500, 20, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
 local Section = Tab:NewSection("Jump Hack")
 
 Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
 end)
 
+Section:NewSlider("Jump Hack", "SliderInfo", 500, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
 local Section = Tab:NewSection("Gravity Hack")
 
 Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
     workspace.Gravity = txt
+end)
+
+Section:NewSlider("Gravity Hack", "SliderInfo", 500, 0, function(s)
+    workspace.Gravity = s
 end)
 
 elseif game.PlaceId == 11828384869 then
@@ -1967,20 +2013,6 @@ local Section = Tab:NewSection("Youtube")
 
 Section:NewButton("Click to copy", "INFO", function()
     setclipboard("https://www.youtube.com/channel/UCgqxZ4MrGPp13dlZyotp_fQ")
-end)
-
-local Tab = Window:NewTab("Home")
-
-local Section = Tab:NewSection("Inf Yiedl")
-
-Section:NewButton("Inf Yield", "Home", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
-
-local Section = Tab:NewSection("Dark Dex")
-
-Section:NewButton("Dark Dex", "Home", function()
-    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
 end)
 
 local Tab = Window:NewTab("Badge")
@@ -2256,6 +2288,38 @@ Section:NewButton("Get Elude", "Home", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-502.335632, 14.2279472, -179.596512, 1, 0, 0, 0, -0.965929747, 0.258804798, 0, -0.258804798, -0.965929747)
 end)
 
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Speed Hack")
+
+Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+end)
+
+Section:NewSlider("Speed Hack", "SliderInfo", 500, 20, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+local Section = Tab:NewSection("Jump Hack")
+
+Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+end)
+
+Section:NewSlider("Jump Hack", "SliderInfo", 500, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Section = Tab:NewSection("Gravity Hack")
+
+Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
+    workspace.Gravity = txt
+end)
+
+Section:NewSlider("Gravity Hack", "SliderInfo", 500, 0, function(s)
+    workspace.Gravity = s
+end)
+
 elseif game.PlaceId == 14422118326 then
     local Window = Library.CreateLib("Kykyryz0B Hub | The Null Zone", "Synapse")
 
@@ -2339,6 +2403,38 @@ wait(0.5)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4839.9873, -212.534714, 801.233582, -0.174594268, 0.00196698541, 0.984638512, 1.7593112e-06, 0.999997973, -0.0019973577, -0.984640479, -0.000347001653, -0.174593911)
 wait(0.2)
 fireclickdetector(workspace:GetChildren()[13].Handle.ClickDetector)
+end)
+
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Speed Hack")
+
+Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+end)
+
+Section:NewSlider("Speed Hack", "SliderInfo", 500, 20, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+local Section = Tab:NewSection("Jump Hack")
+
+Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+end)
+
+Section:NewSlider("Jump Hack", "SliderInfo", 500, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Section = Tab:NewSection("Gravity Hack")
+
+Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
+    workspace.Gravity = txt
+end)
+
+Section:NewSlider("Gravity Hack", "SliderInfo", 500, 0, function(s)
+    workspace.Gravity = s
 end)
 
 elseif game.PlaceId == 15507333474 then
@@ -2460,6 +2556,38 @@ while _G.winsfarm == true do wait(0.2)
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156.376877, 183.665649, -112.461929, 0.999920785, -0.000772107043, 0.0125604626, 0.000854012789, 0.999978423, -0.00651686639, -0.0125551587, 0.00652707741, 0.999899924)
 end
     end
+end)
+
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Speed Hack")
+
+Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+end)
+
+Section:NewSlider("Speed Hack", "SliderInfo", 500, 20, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+local Section = Tab:NewSection("Jump Hack")
+
+Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+end)
+
+Section:NewSlider("Jump Hack", "SliderInfo", 500, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Section = Tab:NewSection("Gravity Hack")
+
+Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
+    workspace.Gravity = txt
+end)
+
+Section:NewSlider("Gravity Hack", "SliderInfo", 500, 0, function(s)
+    workspace.Gravity = s
 end)
 
 end
