@@ -1084,7 +1084,15 @@ local Section = Tab:NewSection("Teleport (can kicked)")
 
 Section:NewDropdown("Teleport", "Teleport", {"Farm", "Lighthouse", "Mountain", "Acid", "Market"}, function(waw)
     if waw == "Farm" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(430.46283, 92.7780762, 316.353607, 0.999637723, -3.2292086e-05, -0.0269170273, -3.22776259e-07, 0.999999285, -0.00121193845, 0.0269170459, 0.00121150829, 0.999637008)
+    local tweenService = game:GetService("TweenService")
+local tweenInfo = TweenInfo.new(.5, Enum.EasingStyle.Linear)
+local targetCFrame = CFrame.new(430.46283, 92.7780762, 316.353607)
+local tween = tweenService:Create(
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+    tweenInfo,
+    {CFrame = targetCFrame}
+)
+tween:Play()
 elseif waw == "Lighthouse" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(303.358215, 149.871368, -578.09436, -0.0048140781, 0.00255327276, -0.999985158, -3.60583931e-06, 0.999996722, 0.00255331979, 0.999988437, 1.58763287e-05, -0.00481405389)
 elseif waw == "Mountain" then
