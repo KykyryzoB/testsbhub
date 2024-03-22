@@ -1085,7 +1085,7 @@ local Section = Tab:NewSection("Teleport (can kicked)")
 Section:NewDropdown("Teleport", "Teleport", {"Farm", "Lighthouse", "Mountain", "Acid", "Market"}, function(waw)
     if waw == "Farm" then
     local tweenService = game:GetService("TweenService")
-local tweenInfo = TweenInfo.new(.5, Enum.EasingStyle.Linear)
+local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
 local targetCFrame = CFrame.new(430.46283, 92.7780762, 316.353607)
 local tween = tweenService:Create(
     game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
@@ -1293,10 +1293,11 @@ Section:NewToggle("Item Esp", "Misc", function(state)
             _G.itemsespSR = false
 
             while _G.itemsespSR == true do wait(2)
-                if v.ClassName == "Tool" and v:FindFirstChild("Handle") and v.Handle:FindFirstChild("espitemsr") then
-                    v.Handle.espitemsr:Destroy()
-                end
+                print(431)
             end
+                            if v.ClassName == "Tool" and v:FindFirstChild("Handle") and v.Handle:FindFirstChild("espitemsr") then
+                    v.Handle.espitemsr:Destroy()
+                            end
         end
     end
 end)
