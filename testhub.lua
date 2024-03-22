@@ -1220,9 +1220,9 @@ end)
 
 local Tab = Window:NewTab("Misc")
 
-local Section = Tab:NewSection("Get All Items")
+local Section = Tab:NewSection("Get All Items | NOT WORKING")
 
-Section:NewToggle("Get All Items", "Misc", function(state)
+Section:NewToggle("Get All Items | NOT WORKING", "Misc", function(state)
     if state then
         _G.GetItems = true
 
@@ -1243,6 +1243,52 @@ Section:NewToggle("Get All Items", "Misc", function(state)
             print(12)
         task.wait()
         end
+    end
+end)
+
+local Section = Tab:NewSection("Item Esp")
+
+Section:NewToggle("Item Esp", "Misc", function(state)
+    if state then
+        _G.itemsespSR = true
+
+while _G.itemsespSR == true do wait(2)
+                            _G.removingsritems = false
+
+                        while _G.removingsr == true do wait(1)
+                            print(dasd)
+                        end
+                        for i, v in ipairs(game.Workspace.Items:GetChildren()) do
+                    if v.ClassName == "Tool" and v:FindFirstChild("Handle") then
+        espitemsr = Instance.new("BillboardGui", v.Handle)
+        espitemsr.Adornee = v.Handle
+        espitemsr.Name = "espitemsr"
+        espitemsr.Size = UDim2.new(0, 100, 0, 150)
+        espitemsr.StudsOffset = Vector3.new(0, 1, 0)
+        espitemsr.AlwaysOnTop = true
+        espitemsr.StudsOffset = Vector3.new(0, 3, 0)
+        textitemsr = Instance.new("TextLabel", espitemsr)
+        textitemsr.BackgroundTransparency = 1
+        textitemsr.Size = UDim2.new(0, 100, 0, 100)
+        textitemsr.TextSize = 15
+        textitemsr.Font = Enum.Font.SourceSansSemibold
+        textitemsr.TextColor3 = Color3.fromRGB(0,0,255)
+        textitemsr.TextStrokeTransparency = 0
+        textitemsr.Text = v.Name
+                    end
+                        end
+end
+    else
+        _G.removingsritems = true
+
+        while _G.removingsritems == true do wait(1)
+            _G.itemsespSR = false
+
+            while _G.itemsespSR == true do wait(2)
+                if v.ClassName == "Tool" and v:FindFirstChild("Handle") and v.Handle:FindFirstChild("espitemsr") then
+                    v.Handle.espitemsr:Destroy()
+                end
+            end
     end
 end)
 
