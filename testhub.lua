@@ -1082,7 +1082,7 @@ local Tab = Window:NewTab("Teleport")
 
 local Section = Tab:NewSection("Teleport (can kicked)")
 
-Section:NewDropdown("Teleport", "Teleport", {"Farm", "Lighthouse", "Mountain", "Acid", "Market"}, function(waw)
+Section:NewDropdown("Teleport", "Teleport", {"Farm", "Lighthouse", "Mountain", "River", "Market"}, function(waw)
     if waw == "Farm" then
     local tweenService = game:GetService("TweenService")
 local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
